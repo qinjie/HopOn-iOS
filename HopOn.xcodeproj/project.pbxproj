@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ECFBD5AE1D5425AD001B0757 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFBD5AD1D5425AD001B0757 /* AppDelegate.swift */; };
+		ECFBD5B01D5425AD001B0757 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFBD5AF1D5425AD001B0757 /* ViewController.swift */; };
+		ECFBD5B31D5425AD001B0757 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECFBD5B11D5425AD001B0757 /* Main.storyboard */; };
+		ECFBD5B51D5425AD001B0757 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECFBD5B41D5425AD001B0757 /* Assets.xcassets */; };
+		ECFBD5B81D5425AD001B0757 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECFBD5B61D5425AD001B0757 /* LaunchScreen.storyboard */; };
+		ECFBD5C31D5425AD001B0757 /* HopOnTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFBD5C21D5425AD001B0757 /* HopOnTests.swift */; };
+		ECFBD5CE1D5425AD001B0757 /* HopOnUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFBD5CD1D5425AD001B0757 /* HopOnUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ECFBD5BF1D5425AD001B0757 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECFBD5A21D5425AD001B0757 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECFBD5A91D5425AD001B0757;
+			remoteInfo = HopOn;
+		};
+		ECFBD5CA1D5425AD001B0757 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECFBD5A21D5425AD001B0757 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECFBD5A91D5425AD001B0757;
+			remoteInfo = HopOn;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ECFBD5AA1D5425AD001B0757 /* HopOn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HopOn.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECFBD5AD1D5425AD001B0757 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ECFBD5AF1D5425AD001B0757 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ECFBD5B21D5425AD001B0757 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ECFBD5B41D5425AD001B0757 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ECFBD5B71D5425AD001B0757 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ECFBD5B91D5425AD001B0757 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECFBD5BE1D5425AD001B0757 /* HopOnTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HopOnTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECFBD5C21D5425AD001B0757 /* HopOnTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopOnTests.swift; sourceTree = "<group>"; };
+		ECFBD5C41D5425AD001B0757 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECFBD5C91D5425AD001B0757 /* HopOnUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HopOnUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECFBD5CD1D5425AD001B0757 /* HopOnUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopOnUITests.swift; sourceTree = "<group>"; };
+		ECFBD5CF1D5425AD001B0757 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ECFBD5A71D5425AD001B0757 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECFBD5BB1D5425AD001B0757 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECFBD5C61D5425AD001B0757 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ECFBD5A11D5425AD001B0757 = {
+			isa = PBXGroup;
+			children = (
+				ECFBD5AC1D5425AD001B0757 /* HopOn */,
+				ECFBD5C11D5425AD001B0757 /* HopOnTests */,
+				ECFBD5CC1D5425AD001B0757 /* HopOnUITests */,
+				ECFBD5AB1D5425AD001B0757 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ECFBD5AB1D5425AD001B0757 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ECFBD5AA1D5425AD001B0757 /* HopOn.app */,
+				ECFBD5BE1D5425AD001B0757 /* HopOnTests.xctest */,
+				ECFBD5C91D5425AD001B0757 /* HopOnUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ECFBD5AC1D5425AD001B0757 /* HopOn */ = {
+			isa = PBXGroup;
+			children = (
+				ECFBD5AD1D5425AD001B0757 /* AppDelegate.swift */,
+				ECFBD5AF1D5425AD001B0757 /* ViewController.swift */,
+				ECFBD5B11D5425AD001B0757 /* Main.storyboard */,
+				ECFBD5B41D5425AD001B0757 /* Assets.xcassets */,
+				ECFBD5B61D5425AD001B0757 /* LaunchScreen.storyboard */,
+				ECFBD5B91D5425AD001B0757 /* Info.plist */,
+			);
+			path = HopOn;
+			sourceTree = "<group>";
+		};
+		ECFBD5C11D5425AD001B0757 /* HopOnTests */ = {
+			isa = PBXGroup;
+			children = (
+				ECFBD5C21D5425AD001B0757 /* HopOnTests.swift */,
+				ECFBD5C41D5425AD001B0757 /* Info.plist */,
+			);
+			path = HopOnTests;
+			sourceTree = "<group>";
+		};
+		ECFBD5CC1D5425AD001B0757 /* HopOnUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ECFBD5CD1D5425AD001B0757 /* HopOnUITests.swift */,
+				ECFBD5CF1D5425AD001B0757 /* Info.plist */,
+			);
+			path = HopOnUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ECFBD5A91D5425AD001B0757 /* HopOn */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECFBD5D21D5425AD001B0757 /* Build configuration list for PBXNativeTarget "HopOn" */;
+			buildPhases = (
+				ECFBD5A61D5425AD001B0757 /* Sources */,
+				ECFBD5A71D5425AD001B0757 /* Frameworks */,
+				ECFBD5A81D5425AD001B0757 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HopOn;
+			productName = HopOn;
+			productReference = ECFBD5AA1D5425AD001B0757 /* HopOn.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ECFBD5BD1D5425AD001B0757 /* HopOnTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECFBD5D51D5425AD001B0757 /* Build configuration list for PBXNativeTarget "HopOnTests" */;
+			buildPhases = (
+				ECFBD5BA1D5425AD001B0757 /* Sources */,
+				ECFBD5BB1D5425AD001B0757 /* Frameworks */,
+				ECFBD5BC1D5425AD001B0757 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ECFBD5C01D5425AD001B0757 /* PBXTargetDependency */,
+			);
+			name = HopOnTests;
+			productName = HopOnTests;
+			productReference = ECFBD5BE1D5425AD001B0757 /* HopOnTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ECFBD5C81D5425AD001B0757 /* HopOnUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECFBD5D81D5425AD001B0757 /* Build configuration list for PBXNativeTarget "HopOnUITests" */;
+			buildPhases = (
+				ECFBD5C51D5425AD001B0757 /* Sources */,
+				ECFBD5C61D5425AD001B0757 /* Frameworks */,
+				ECFBD5C71D5425AD001B0757 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ECFBD5CB1D5425AD001B0757 /* PBXTargetDependency */,
+			);
+			name = HopOnUITests;
+			productName = HopOnUITests;
+			productReference = ECFBD5C91D5425AD001B0757 /* HopOnUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ECFBD5A21D5425AD001B0757 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Intern;
+				TargetAttributes = {
+					ECFBD5A91D5425AD001B0757 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					ECFBD5BD1D5425AD001B0757 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = ECFBD5A91D5425AD001B0757;
+					};
+					ECFBD5C81D5425AD001B0757 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = ECFBD5A91D5425AD001B0757;
+					};
+				};
+			};
+			buildConfigurationList = ECFBD5A51D5425AD001B0757 /* Build configuration list for PBXProject "HopOn" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ECFBD5A11D5425AD001B0757;
+			productRefGroup = ECFBD5AB1D5425AD001B0757 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ECFBD5A91D5425AD001B0757 /* HopOn */,
+				ECFBD5BD1D5425AD001B0757 /* HopOnTests */,
+				ECFBD5C81D5425AD001B0757 /* HopOnUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ECFBD5A81D5425AD001B0757 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECFBD5B81D5425AD001B0757 /* LaunchScreen.storyboard in Resources */,
+				ECFBD5B51D5425AD001B0757 /* Assets.xcassets in Resources */,
+				ECFBD5B31D5425AD001B0757 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECFBD5BC1D5425AD001B0757 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECFBD5C71D5425AD001B0757 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ECFBD5A61D5425AD001B0757 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECFBD5B01D5425AD001B0757 /* ViewController.swift in Sources */,
+				ECFBD5AE1D5425AD001B0757 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECFBD5BA1D5425AD001B0757 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECFBD5C31D5425AD001B0757 /* HopOnTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECFBD5C51D5425AD001B0757 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECFBD5CE1D5425AD001B0757 /* HopOnUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ECFBD5C01D5425AD001B0757 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ECFBD5A91D5425AD001B0757 /* HopOn */;
+			targetProxy = ECFBD5BF1D5425AD001B0757 /* PBXContainerItemProxy */;
+		};
+		ECFBD5CB1D5425AD001B0757 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ECFBD5A91D5425AD001B0757 /* HopOn */;
+			targetProxy = ECFBD5CA1D5425AD001B0757 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ECFBD5B11D5425AD001B0757 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECFBD5B21D5425AD001B0757 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ECFBD5B61D5425AD001B0757 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECFBD5B71D5425AD001B0757 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ECFBD5D01D5425AD001B0757 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ECFBD5D11D5425AD001B0757 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ECFBD5D31D5425AD001B0757 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HopOn/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Kendy.HopOn;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ECFBD5D41D5425AD001B0757 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HopOn/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Kendy.HopOn;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		ECFBD5D61D5425AD001B0757 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HopOnTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Kendy.HopOnTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HopOn.app/HopOn";
+			};
+			name = Debug;
+		};
+		ECFBD5D71D5425AD001B0757 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HopOnTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Kendy.HopOnTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HopOn.app/HopOn";
+			};
+			name = Release;
+		};
+		ECFBD5D91D5425AD001B0757 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HopOnUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Kendy.HopOnUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HopOn;
+			};
+			name = Debug;
+		};
+		ECFBD5DA1D5425AD001B0757 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HopOnUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Kendy.HopOnUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HopOn;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ECFBD5A51D5425AD001B0757 /* Build configuration list for PBXProject "HopOn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECFBD5D01D5425AD001B0757 /* Debug */,
+				ECFBD5D11D5425AD001B0757 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECFBD5D21D5425AD001B0757 /* Build configuration list for PBXNativeTarget "HopOn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECFBD5D31D5425AD001B0757 /* Debug */,
+				ECFBD5D41D5425AD001B0757 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		ECFBD5D51D5425AD001B0757 /* Build configuration list for PBXNativeTarget "HopOnTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECFBD5D61D5425AD001B0757 /* Debug */,
+				ECFBD5D71D5425AD001B0757 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		ECFBD5D81D5425AD001B0757 /* Build configuration list for PBXNativeTarget "HopOnUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECFBD5D91D5425AD001B0757 /* Debug */,
+				ECFBD5DA1D5425AD001B0757 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ECFBD5A21D5425AD001B0757 /* Project object */;
+}
