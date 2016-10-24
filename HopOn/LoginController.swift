@@ -7,89 +7,88 @@
 //
 
 import UIKit
+import Alamofire
 
-class LoginController: UITableViewController {
+class LoginController: UIViewController {
 
+    
+    @IBOutlet weak var txtUsername: UITextField!
+    @IBOutlet weak var txtPassword: UITextField!
+    @IBOutlet weak var txtErrorMessage: UILabel!
+    @IBOutlet weak var txtLogin: UIButton!
+    var Transfer: UserDefaults!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        Transfer = UserDefaults()
+        txtErrorMessage.text = ""
+        txtLogin.layer.cornerRadius = 4
+        txtLogin.layer.borderWidth = 1
+        txtLogin.layer.borderColor = UIColor.white.cgColor
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func returnKeyUsernameTapped(_ sender: AnyObject) {
+        self.txtPassword.becomeFirstResponder()
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    @IBAction func returnKeyPasswordTapped(_ sender: AnyObject) {
+        self.btnLoginTapped(sender)
     }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+    @IBAction func inputPassword(_ sender: AnyObject) {
+        txtPassword.isSecureTextEntry = true
     }
-
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
-        return cell
+    
+    @IBAction func inputUsername(_ sender: AnyObject) {
+        txtErrorMessage.text = ""
     }
-    */
+    
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    @IBAction func btnLoginTapped(_ sender: AnyObject) {
+        //Wating dialog
+//        let alertController = UIAlertController(title: nil, message: "Please wait\n\n", preferredStyle: UIAlertControllerStyle.alert)
+//        let spinnerIndicator: UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
+//        spinnerIndicator.center = CGPoint(x: 135.0, y: 65.5)
+//        spinnerIndicator.color = UIColor.black
+//        spinnerIndicator.startAnimating()
+//        alertController.view.addSubview(spinnerIndicator)
+//        self.present(alertController, animated: false, completion: nil)
+        let url = URL(string: Constants.baseURL + "/hopon-web/api/web/index.php/v1/user/login")
+        let headers: HTTPHeaders = ["":""]
+        let parameters: Parameters = [
+            "username": txtUsername.text!,
+            "password": txtPassword.text!
+        ]
+        
+        Alamofire.request(url!, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
+            let statusCode = response.response?.statusCode
+            if (statusCode == 200){
+                if let JSON = response.result.value as? [String: Any] {
+                    Constants.token = JSON["token"] as! String
+                    Constants.fullname = JSON["fullname"] as! String
+                    DispatchQueue.main.async(execute: {
+                        //alertController.dismiss(animated: true, completion: nil)
+                        OperationQueue.main.addOperation {
+                            self.performSegue(withIdentifier: "segueLogin", sender: nil)
+                        }
+                    })
+                }
+            }
+            else{
+                if (statusCode == 400){
+                    DispatchQueue.main.async(execute: {
+//                        alertController.dismiss(animated: true, completion: nil)
+                        self.txtErrorMessage.text = "Incorrect data!"
+                    })
+                }
+                else{
+                    DispatchQueue.main.async(execute: {
+//                        alertController.dismiss(animated: true, completion: nil)
+                        self.txtErrorMessage.text = "Server error!"
+                    })
+                }
+            }
+        }
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

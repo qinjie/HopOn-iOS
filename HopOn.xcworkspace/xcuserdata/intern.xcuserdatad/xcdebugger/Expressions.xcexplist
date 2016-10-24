@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "BicycleBookingController.(loadData() -&gt; ()).(closure #1):BicycleBookingController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "url">
+            </PersistentString>
+            <PersistentString
+               value = "station_id">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "StationListController.(loadData() -&gt; ()).(closure #1).(closure #1):StationListController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "stationArray">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "StationListController.tableView(UITableView, cellForRowAt : IndexPath) -&gt; UITableViewCell:StationListController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "stationArray">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "StationListController.(loadData() -&gt; ()).(closure #1):StationListController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "Constants.curLat">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

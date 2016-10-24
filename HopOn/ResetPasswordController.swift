@@ -7,29 +7,54 @@
 //
 
 import UIKit
+import Alamofire
 
 class ResetPasswordController: UIViewController {
 
+    @IBOutlet weak var txtEmail: UITextField!
+    @IBOutlet weak var txtErrorMessage: UILabel!
+    var Transfer: UserDefaults!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        Transfer = UserDefaults()
+        txtErrorMessage.text = ""
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func btnSubmitTapped(_ sender: AnyObject) {
+        if (txtEmail.text == ""){
+            txtErrorMessage.text = "Please insert your email address!"
+        }
+        else{
+            let url = URL(string: Constants.baseURL + "/hopon-web/api/web/index.php/v1/user/reset-password")
+            let headers: HTTPHeaders = ["":""]
+            let parameters: Parameters = [
+                "email_mobile" : self.txtEmail.text
+            ]
+            
+            Alamofire.request(url!, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
+                let statusCode = response.response?.statusCode
+                if (statusCode == 200){
+                    DispatchQueue.main.async(execute: {
+                        self.txtErrorMessage.text = "Email sent!\nPlease check your email and follow the link to reset your password!"
+                        self.txtEmail.isEnabled = false
+                    })
+                }
+                else{
+                    if (statusCode == 400){
+                        DispatchQueue.main.async(execute: {
+                            self.txtErrorMessage.text = "Incorrect data!"
+                        })
+                    }
+                    else{
+                        DispatchQueue.main.async(execute: {
+                            self.txtErrorMessage.text = "Server error!"
+                        })
+                    }
+                }
+            }
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
-    */
-
 }

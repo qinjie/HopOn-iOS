@@ -1,0 +1,27 @@
+PODS:
+  - Alamofire (4.0.1)
+  - Bean-iOS-OSX-SDK (3.0.1)
+  - EVReflection (3.1.2)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0)
+  - Bean-iOS-OSX-SDK
+  - EVReflection (from `https://github.com/evermeer/EVReflection.git`)
+
+EXTERNAL SOURCES:
+  EVReflection:
+    :git: https://github.com/evermeer/EVReflection.git
+
+CHECKOUT OPTIONS:
+  EVReflection:
+    :commit: 066e05fb80df7546768826a850c26d0e45878587
+    :git: https://github.com/evermeer/EVReflection.git
+
+SPEC CHECKSUMS:
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  Bean-iOS-OSX-SDK: a1fef48801ce07304d1eb0ae2cafa472f97478be
+  EVReflection: 102d8ca777db55200f48b80d9628c8d50fb4109d
+
+PODFILE CHECKSUM: c6fbceb2698328f1044d27f4ab92decf9b5fc175
+
+COCOAPODS: 1.1.0.rc.3

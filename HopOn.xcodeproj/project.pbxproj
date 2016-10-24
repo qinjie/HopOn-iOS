@@ -7,6 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB225A2DE64072332F79D4FE /* Pods_HopOn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9DAE98628737E93906B4EB /* Pods_HopOn.framework */; };
+		EC02B1421D62B5DB0032A3C0 /* StationListNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC02B1411D62B5DB0032A3C0 /* StationListNavigationController.swift */; };
+		EC02B1441D62BF070032A3C0 /* BicycleBookingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC02B1431D62BF070032A3C0 /* BicycleBookingController.swift */; };
+		EC3AFCB91D66E87B00E016C3 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3AFCB81D66E87B00E016C3 /* RatingControl.swift */; };
+		EC55B5E41D66ADD100371E81 /* BookingNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC55B5E31D66ADD100371E81 /* BookingNavigationController.swift */; };
+		EC55B5EC1D66D9B900371E81 /* FeedbackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC55B5EB1D66D9B900371E81 /* FeedbackController.swift */; };
+		EC55B5F21D66E13400371E81 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC55B5F11D66E13400371E81 /* CheckBox.swift */; };
+		EC8A3A0D1D5AFCEC007BA73B /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8A3A0C1D5AFCEC007BA73B /* HistoryCell.swift */; };
+		EC8A955C1D6172520095BAE3 /* StationListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8A955B1D6172520095BAE3 /* StationListController.swift */; };
+		EC8A955E1D61726F0095BAE3 /* StationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8A955D1D61726F0095BAE3 /* StationCell.swift */; };
+		EC9C71301D658D6E000DA77B /* HomeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9C712F1D658D6E000DA77B /* HomeNavigationController.swift */; };
+		ECBAD92D1D6D7A0B00C99EC7 /* 404.gif in Resources */ = {isa = PBXBuildFile; fileRef = ECBAD91D1D6D7A0B00C99EC7 /* 404.gif */; };
+		ECBAD92E1D6D7A0B00C99EC7 /* Backgroud.png in Resources */ = {isa = PBXBuildFile; fileRef = ECBAD91E1D6D7A0B00C99EC7 /* Backgroud.png */; };
+		ECBAD92F1D6D7A0B00C99EC7 /* Bicycle-30.png in Resources */ = {isa = PBXBuildFile; fileRef = ECBAD91F1D6D7A0B00C99EC7 /* Bicycle-30.png */; };
+		ECBAD9301D6D7A0B00C99EC7 /* Bicycle-100.png in Resources */ = {isa = PBXBuildFile; fileRef = ECBAD9201D6D7A0B00C99EC7 /* Bicycle-100.png */; };
+		ECBAD9311D6D7A0B00C99EC7 /* Bicycle-Demo-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ECBAD9211D6D7A0B00C99EC7 /* Bicycle-Demo-1.jpg */; };
+		ECBAD9321D6D7A0B00C99EC7 /* Bicycle-Demo-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ECBAD9221D6D7A0B00C99EC7 /* Bicycle-Demo-2.jpg */; };
+		ECBAD9331D6D7A0B00C99EC7 /* Checked.png in Resources */ = {isa = PBXBuildFile; fileRef = ECBAD9231D6D7A0B00C99EC7 /* Checked.png */; };
+		ECBAD9341D6D7A0B00C99EC7 /* emptyStar.png in Resources */ = {isa = PBXBuildFile; fileRef = ECBAD9241D6D7A0B00C99EC7 /* emptyStar.png */; };
+		ECBAD9351D6D7A0B00C99EC7 /* filledStar.png in Resources */ = {isa = PBXBuildFile; fileRef = ECBAD9251D6D7A0B00C99EC7 /* filledStar.png */; };
+		ECBAD9361D6D7A0B00C99EC7 /* Geo-fence-30.png in Resources */ = {isa = PBXBuildFile; fileRef = ECBAD9261D6D7A0B00C99EC7 /* Geo-fence-30.png */; };
+		ECBAD9371D6D7A0B00C99EC7 /* Home-30.png in Resources */ = {isa = PBXBuildFile; fileRef = ECBAD9271D6D7A0B00C99EC7 /* Home-30.png */; };
+		ECBAD9381D6D7A0B00C99EC7 /* List-30.png in Resources */ = {isa = PBXBuildFile; fileRef = ECBAD9281D6D7A0B00C99EC7 /* List-30.png */; };
+		ECBAD9391D6D7A0B00C99EC7 /* Parking-30.png in Resources */ = {isa = PBXBuildFile; fileRef = ECBAD9291D6D7A0B00C99EC7 /* Parking-30.png */; };
+		ECBAD93A1D6D7A0B00C99EC7 /* Settings-30.png in Resources */ = {isa = PBXBuildFile; fileRef = ECBAD92A1D6D7A0B00C99EC7 /* Settings-30.png */; };
+		ECBAD93B1D6D7A0B00C99EC7 /* Unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = ECBAD92B1D6D7A0B00C99EC7 /* Unchecked.png */; };
+		ECBAD93C1D6D7A0B00C99EC7 /* User-30.png in Resources */ = {isa = PBXBuildFile; fileRef = ECBAD92C1D6D7A0B00C99EC7 /* User-30.png */; };
+		ECC4E4EA1D58168A000B80AE /* ChangePasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC4E4E91D58168A000B80AE /* ChangePasswordController.swift */; };
+		ECC4E4EC1D581C3A000B80AE /* BookedDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC4E4EB1D581C3A000B80AE /* BookedDetailController.swift */; };
+		ECC4E4F01D5820C6000B80AE /* RegisterConfirmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC4E4EF1D5820C6000B80AE /* RegisterConfirmController.swift */; };
+		ECC4E4F81D582EE8000B80AE /* HistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC4E4F71D582EE8000B80AE /* HistoryController.swift */; };
+		ECC4E4FA1D5855AF000B80AE /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC4E4F91D5855AF000B80AE /* LocationSearchTable.swift */; };
+		ECF6C87A1D5C0F7B000B4363 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF6C8791D5C0F7B000B4363 /* TabBarController.swift */; };
 		ECFBD5AE1D5425AD001B0757 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFBD5AD1D5425AD001B0757 /* AppDelegate.swift */; };
 		ECFBD5B01D5425AD001B0757 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFBD5AF1D5425AD001B0757 /* ViewController.swift */; };
 		ECFBD5B31D5425AD001B0757 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECFBD5B11D5425AD001B0757 /* Main.storyboard */; };
@@ -14,6 +47,12 @@
 		ECFBD5B81D5425AD001B0757 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECFBD5B61D5425AD001B0757 /* LaunchScreen.storyboard */; };
 		ECFBD5C31D5425AD001B0757 /* HopOnTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFBD5C21D5425AD001B0757 /* HopOnTests.swift */; };
 		ECFBD5CE1D5425AD001B0757 /* HopOnUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFBD5CD1D5425AD001B0757 /* HopOnUITests.swift */; };
+		ECFBD5E31D5434DA001B0757 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFBD5E21D5434DA001B0757 /* Items.swift */; };
+		ECFBD5EC1D546B50001B0757 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFBD5EB1D546B50001B0757 /* LoginController.swift */; };
+		ECFBD5F21D5483AE001B0757 /* BookingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFBD5F11D5483AE001B0757 /* BookingController.swift */; };
+		ECFBD5F41D5483C8001B0757 /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFBD5F31D5483C8001B0757 /* SettingController.swift */; };
+		ECFBD5F81D548D3E001B0757 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFBD5F71D548D3E001B0757 /* RegisterController.swift */; };
+		ECFBD5FA1D548D52001B0757 /* ResetPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFBD5F91D548D52001B0757 /* ResetPasswordController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +73,42 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		35910E6D1F4FF3474E87BEEA /* Pods-HopOn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HopOn.release.xcconfig"; path = "Pods/Target Support Files/Pods-HopOn/Pods-HopOn.release.xcconfig"; sourceTree = "<group>"; };
+		BD82A1E66456060F4F39A76D /* Pods-HopOn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HopOn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HopOn/Pods-HopOn.debug.xcconfig"; sourceTree = "<group>"; };
+		CD9DAE98628737E93906B4EB /* Pods_HopOn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HopOn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC02B1411D62B5DB0032A3C0 /* StationListNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationListNavigationController.swift; sourceTree = "<group>"; };
+		EC02B1431D62BF070032A3C0 /* BicycleBookingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BicycleBookingController.swift; sourceTree = "<group>"; };
+		EC198ADB1DB4C71B00D83A23 /* HopOn-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HopOn-Bridging-Header.h"; sourceTree = "<group>"; };
+		EC3AFCB81D66E87B00E016C3 /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
+		EC55B5E31D66ADD100371E81 /* BookingNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingNavigationController.swift; sourceTree = "<group>"; };
+		EC55B5EB1D66D9B900371E81 /* FeedbackController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackController.swift; sourceTree = "<group>"; };
+		EC55B5F11D66E13400371E81 /* CheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		EC8A3A0C1D5AFCEC007BA73B /* HistoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
+		EC8A955B1D6172520095BAE3 /* StationListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationListController.swift; sourceTree = "<group>"; };
+		EC8A955D1D61726F0095BAE3 /* StationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationCell.swift; sourceTree = "<group>"; };
+		EC9C712F1D658D6E000DA77B /* HomeNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNavigationController.swift; sourceTree = "<group>"; };
+		ECBAD91D1D6D7A0B00C99EC7 /* 404.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 404.gif; path = Images/404.gif; sourceTree = "<group>"; };
+		ECBAD91E1D6D7A0B00C99EC7 /* Backgroud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Backgroud.png; path = Images/Backgroud.png; sourceTree = "<group>"; };
+		ECBAD91F1D6D7A0B00C99EC7 /* Bicycle-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Bicycle-30.png"; path = "Images/Bicycle-30.png"; sourceTree = "<group>"; };
+		ECBAD9201D6D7A0B00C99EC7 /* Bicycle-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Bicycle-100.png"; path = "Images/Bicycle-100.png"; sourceTree = "<group>"; };
+		ECBAD9211D6D7A0B00C99EC7 /* Bicycle-Demo-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Bicycle-Demo-1.jpg"; path = "Images/Bicycle-Demo-1.jpg"; sourceTree = "<group>"; };
+		ECBAD9221D6D7A0B00C99EC7 /* Bicycle-Demo-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Bicycle-Demo-2.jpg"; path = "Images/Bicycle-Demo-2.jpg"; sourceTree = "<group>"; };
+		ECBAD9231D6D7A0B00C99EC7 /* Checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Checked.png; path = Images/Checked.png; sourceTree = "<group>"; };
+		ECBAD9241D6D7A0B00C99EC7 /* emptyStar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = emptyStar.png; path = Images/emptyStar.png; sourceTree = "<group>"; };
+		ECBAD9251D6D7A0B00C99EC7 /* filledStar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = filledStar.png; path = Images/filledStar.png; sourceTree = "<group>"; };
+		ECBAD9261D6D7A0B00C99EC7 /* Geo-fence-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Geo-fence-30.png"; path = "Images/Geo-fence-30.png"; sourceTree = "<group>"; };
+		ECBAD9271D6D7A0B00C99EC7 /* Home-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Home-30.png"; path = "Images/Home-30.png"; sourceTree = "<group>"; };
+		ECBAD9281D6D7A0B00C99EC7 /* List-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "List-30.png"; path = "Images/List-30.png"; sourceTree = "<group>"; };
+		ECBAD9291D6D7A0B00C99EC7 /* Parking-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Parking-30.png"; path = "Images/Parking-30.png"; sourceTree = "<group>"; };
+		ECBAD92A1D6D7A0B00C99EC7 /* Settings-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Settings-30.png"; path = "Images/Settings-30.png"; sourceTree = "<group>"; };
+		ECBAD92B1D6D7A0B00C99EC7 /* Unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Unchecked.png; path = Images/Unchecked.png; sourceTree = "<group>"; };
+		ECBAD92C1D6D7A0B00C99EC7 /* User-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "User-30.png"; path = "Images/User-30.png"; sourceTree = "<group>"; };
+		ECC4E4E91D58168A000B80AE /* ChangePasswordController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordController.swift; sourceTree = "<group>"; };
+		ECC4E4EB1D581C3A000B80AE /* BookedDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookedDetailController.swift; sourceTree = "<group>"; };
+		ECC4E4EF1D5820C6000B80AE /* RegisterConfirmController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterConfirmController.swift; sourceTree = "<group>"; };
+		ECC4E4F71D582EE8000B80AE /* HistoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryController.swift; sourceTree = "<group>"; };
+		ECC4E4F91D5855AF000B80AE /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
+		ECF6C8791D5C0F7B000B4363 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		ECFBD5AA1D5425AD001B0757 /* HopOn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HopOn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECFBD5AD1D5425AD001B0757 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECFBD5AF1D5425AD001B0757 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +122,12 @@
 		ECFBD5C91D5425AD001B0757 /* HopOnUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HopOnUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECFBD5CD1D5425AD001B0757 /* HopOnUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopOnUITests.swift; sourceTree = "<group>"; };
 		ECFBD5CF1D5425AD001B0757 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECFBD5E21D5434DA001B0757 /* Items.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
+		ECFBD5EB1D546B50001B0757 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		ECFBD5F11D5483AE001B0757 /* BookingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingController.swift; sourceTree = "<group>"; };
+		ECFBD5F31D5483C8001B0757 /* SettingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
+		ECFBD5F71D548D3E001B0757 /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		ECFBD5F91D548D52001B0757 /* ResetPasswordController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB225A2DE64072332F79D4FE /* Pods_HopOn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +156,117 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D616B64395B22A80774A7BBD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BD82A1E66456060F4F39A76D /* Pods-HopOn.debug.xcconfig */,
+				35910E6D1F4FF3474E87BEEA /* Pods-HopOn.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EC198AD71DB4C46F00D83A23 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				EC198ADB1DB4C71B00D83A23 /* HopOn-Bridging-Header.h */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		EC980BB01D6A975400874F6E /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				ECFBD5E21D5434DA001B0757 /* Items.swift */,
+				EC55B5F11D66E13400371E81 /* CheckBox.swift */,
+				EC3AFCB81D66E87B00E016C3 /* RatingControl.swift */,
+			);
+			name = Widgets;
+			sourceTree = "<group>";
+		};
+		EC980BB11D6A977700874F6E /* User */ = {
+			isa = PBXGroup;
+			children = (
+				ECC4E4EF1D5820C6000B80AE /* RegisterConfirmController.swift */,
+				ECFBD5F71D548D3E001B0757 /* RegisterController.swift */,
+				ECFBD5F91D548D52001B0757 /* ResetPasswordController.swift */,
+				ECFBD5EB1D546B50001B0757 /* LoginController.swift */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
+		EC980BB21D6A97A500874F6E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EC9C712F1D658D6E000DA77B /* HomeNavigationController.swift */,
+				ECC4E4F91D5855AF000B80AE /* LocationSearchTable.swift */,
+				ECFBD5AF1D5425AD001B0757 /* ViewController.swift */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		EC980BB31D6A97AC00874F6E /* Parking Station */ = {
+			isa = PBXGroup;
+			children = (
+				EC8A955B1D6172520095BAE3 /* StationListController.swift */,
+				EC8A955D1D61726F0095BAE3 /* StationCell.swift */,
+				EC02B1411D62B5DB0032A3C0 /* StationListNavigationController.swift */,
+				EC02B1431D62BF070032A3C0 /* BicycleBookingController.swift */,
+			);
+			name = "Parking Station";
+			sourceTree = "<group>";
+		};
+		EC980BB41D6A97BB00874F6E /* Current Booking */ = {
+			isa = PBXGroup;
+			children = (
+				EC55B5E31D66ADD100371E81 /* BookingNavigationController.swift */,
+				ECFBD5F11D5483AE001B0757 /* BookingController.swift */,
+				EC55B5EB1D66D9B900371E81 /* FeedbackController.swift */,
+			);
+			name = "Current Booking";
+			sourceTree = "<group>";
+		};
+		EC980BB51D6A97CA00874F6E /* History List */ = {
+			isa = PBXGroup;
+			children = (
+				ECC4E4EB1D581C3A000B80AE /* BookedDetailController.swift */,
+				ECC4E4F71D582EE8000B80AE /* HistoryController.swift */,
+				EC8A3A0C1D5AFCEC007BA73B /* HistoryCell.swift */,
+			);
+			name = "History List";
+			sourceTree = "<group>";
+		};
+		EC980BB61D6A97D500874F6E /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				ECC4E4E91D58168A000B80AE /* ChangePasswordController.swift */,
+				ECFBD5F31D5483C8001B0757 /* SettingController.swift */,
+			);
+			name = Setting;
+			sourceTree = "<group>";
+		};
+		ECBAD91C1D6D7A0100C99EC7 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				ECBAD91D1D6D7A0B00C99EC7 /* 404.gif */,
+				ECBAD91E1D6D7A0B00C99EC7 /* Backgroud.png */,
+				ECBAD91F1D6D7A0B00C99EC7 /* Bicycle-30.png */,
+				ECBAD9201D6D7A0B00C99EC7 /* Bicycle-100.png */,
+				ECBAD9211D6D7A0B00C99EC7 /* Bicycle-Demo-1.jpg */,
+				ECBAD9221D6D7A0B00C99EC7 /* Bicycle-Demo-2.jpg */,
+				ECBAD9231D6D7A0B00C99EC7 /* Checked.png */,
+				ECBAD9241D6D7A0B00C99EC7 /* emptyStar.png */,
+				ECBAD9251D6D7A0B00C99EC7 /* filledStar.png */,
+				ECBAD9261D6D7A0B00C99EC7 /* Geo-fence-30.png */,
+				ECBAD9271D6D7A0B00C99EC7 /* Home-30.png */,
+				ECBAD9281D6D7A0B00C99EC7 /* List-30.png */,
+				ECBAD9291D6D7A0B00C99EC7 /* Parking-30.png */,
+				ECBAD92A1D6D7A0B00C99EC7 /* Settings-30.png */,
+				ECBAD92B1D6D7A0B00C99EC7 /* Unchecked.png */,
+				ECBAD92C1D6D7A0B00C99EC7 /* User-30.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		ECFBD5A11D5425AD001B0757 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +274,8 @@
 				ECFBD5C11D5425AD001B0757 /* HopOnTests */,
 				ECFBD5CC1D5425AD001B0757 /* HopOnUITests */,
 				ECFBD5AB1D5425AD001B0757 /* Products */,
+				D616B64395B22A80774A7BBD /* Pods */,
+				F99E7EF7B462C297B965E3E6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +292,21 @@
 		ECFBD5AC1D5425AD001B0757 /* HopOn */ = {
 			isa = PBXGroup;
 			children = (
+				EC198AD71DB4C46F00D83A23 /* Library */,
+				ECBAD91C1D6D7A0100C99EC7 /* Images */,
+				EC980BB01D6A975400874F6E /* Widgets */,
+				EC980BB61D6A97D500874F6E /* Setting */,
+				EC980BB51D6A97CA00874F6E /* History List */,
+				EC980BB41D6A97BB00874F6E /* Current Booking */,
+				EC980BB31D6A97AC00874F6E /* Parking Station */,
+				EC980BB21D6A97A500874F6E /* Home */,
+				EC980BB11D6A977700874F6E /* User */,
 				ECFBD5AD1D5425AD001B0757 /* AppDelegate.swift */,
-				ECFBD5AF1D5425AD001B0757 /* ViewController.swift */,
 				ECFBD5B11D5425AD001B0757 /* Main.storyboard */,
 				ECFBD5B41D5425AD001B0757 /* Assets.xcassets */,
 				ECFBD5B61D5425AD001B0757 /* LaunchScreen.storyboard */,
 				ECFBD5B91D5425AD001B0757 /* Info.plist */,
+				ECF6C8791D5C0F7B000B4363 /* TabBarController.swift */,
 			);
 			path = HopOn;
 			sourceTree = "<group>";
@@ -125,6 +329,14 @@
 			path = HopOnUITests;
 			sourceTree = "<group>";
 		};
+		F99E7EF7B462C297B965E3E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD9DAE98628737E93906B4EB /* Pods_HopOn.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +344,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ECFBD5D21D5425AD001B0757 /* Build configuration list for PBXNativeTarget "HopOn" */;
 			buildPhases = (
+				098A5947629FEAE55D00CC3A /* [CP] Check Pods Manifest.lock */,
 				ECFBD5A61D5425AD001B0757 /* Sources */,
 				ECFBD5A71D5425AD001B0757 /* Frameworks */,
 				ECFBD5A81D5425AD001B0757 /* Resources */,
+				DB4DBC9F1BE49ED1E2A9F95B /* [CP] Embed Pods Frameworks */,
+				2296FA6B387FFA3A40F15DBE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -188,18 +403,22 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Intern;
 				TargetAttributes = {
 					ECFBD5A91D5425AD001B0757 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = LWKEDA5663;
+						LastSwiftMigration = 0800;
 					};
 					ECFBD5BD1D5425AD001B0757 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = ECFBD5A91D5425AD001B0757;
 					};
 					ECFBD5C81D5425AD001B0757 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = ECFBD5A91D5425AD001B0757;
 					};
 				};
@@ -230,8 +449,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECFBD5B81D5425AD001B0757 /* LaunchScreen.storyboard in Resources */,
+				ECBAD9301D6D7A0B00C99EC7 /* Bicycle-100.png in Resources */,
 				ECFBD5B51D5425AD001B0757 /* Assets.xcassets in Resources */,
+				ECBAD9351D6D7A0B00C99EC7 /* filledStar.png in Resources */,
+				ECBAD9341D6D7A0B00C99EC7 /* emptyStar.png in Resources */,
+				ECBAD92F1D6D7A0B00C99EC7 /* Bicycle-30.png in Resources */,
+				ECBAD9311D6D7A0B00C99EC7 /* Bicycle-Demo-1.jpg in Resources */,
+				ECBAD9331D6D7A0B00C99EC7 /* Checked.png in Resources */,
+				ECBAD92E1D6D7A0B00C99EC7 /* Backgroud.png in Resources */,
+				ECBAD9371D6D7A0B00C99EC7 /* Home-30.png in Resources */,
+				ECBAD9321D6D7A0B00C99EC7 /* Bicycle-Demo-2.jpg in Resources */,
+				ECBAD9361D6D7A0B00C99EC7 /* Geo-fence-30.png in Resources */,
 				ECFBD5B31D5425AD001B0757 /* Main.storyboard in Resources */,
+				ECBAD9391D6D7A0B00C99EC7 /* Parking-30.png in Resources */,
+				ECBAD93B1D6D7A0B00C99EC7 /* Unchecked.png in Resources */,
+				ECBAD93A1D6D7A0B00C99EC7 /* Settings-30.png in Resources */,
+				ECBAD9381D6D7A0B00C99EC7 /* List-30.png in Resources */,
+				ECBAD92D1D6D7A0B00C99EC7 /* 404.gif in Resources */,
+				ECBAD93C1D6D7A0B00C99EC7 /* User-30.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,13 +486,83 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		098A5947629FEAE55D00CC3A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2296FA6B387FFA3A40F15DBE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HopOn/Pods-HopOn-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB4DBC9F1BE49ED1E2A9F95B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HopOn/Pods-HopOn-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ECFBD5A61D5425AD001B0757 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECC4E4FA1D5855AF000B80AE /* LocationSearchTable.swift in Sources */,
+				ECC4E4EA1D58168A000B80AE /* ChangePasswordController.swift in Sources */,
+				ECFBD5F21D5483AE001B0757 /* BookingController.swift in Sources */,
+				EC55B5EC1D66D9B900371E81 /* FeedbackController.swift in Sources */,
+				EC3AFCB91D66E87B00E016C3 /* RatingControl.swift in Sources */,
+				EC02B1441D62BF070032A3C0 /* BicycleBookingController.swift in Sources */,
+				ECF6C87A1D5C0F7B000B4363 /* TabBarController.swift in Sources */,
+				EC02B1421D62B5DB0032A3C0 /* StationListNavigationController.swift in Sources */,
+				ECFBD5FA1D548D52001B0757 /* ResetPasswordController.swift in Sources */,
 				ECFBD5B01D5425AD001B0757 /* ViewController.swift in Sources */,
+				ECC4E4F81D582EE8000B80AE /* HistoryController.swift in Sources */,
+				ECFBD5E31D5434DA001B0757 /* Items.swift in Sources */,
+				EC9C71301D658D6E000DA77B /* HomeNavigationController.swift in Sources */,
+				EC8A955C1D6172520095BAE3 /* StationListController.swift in Sources */,
+				ECC4E4EC1D581C3A000B80AE /* BookedDetailController.swift in Sources */,
+				EC8A3A0D1D5AFCEC007BA73B /* HistoryCell.swift in Sources */,
+				ECFBD5F81D548D3E001B0757 /* RegisterController.swift in Sources */,
 				ECFBD5AE1D5425AD001B0757 /* AppDelegate.swift in Sources */,
+				EC55B5E41D66ADD100371E81 /* BookingNavigationController.swift in Sources */,
+				ECC4E4F01D5820C6000B80AE /* RegisterConfirmController.swift in Sources */,
+				EC8A955E1D61726F0095BAE3 /* StationCell.swift in Sources */,
+				EC55B5F21D66E13400371E81 /* CheckBox.swift in Sources */,
+				ECFBD5EC1D546B50001B0757 /* LoginController.swift in Sources */,
+				ECFBD5F41D5483C8001B0757 /* SettingController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +620,7 @@
 		ECFBD5D01D5425AD001B0757 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -326,8 +632,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -349,9 +657,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -360,6 +669,7 @@
 		ECFBD5D11D5425AD001B0757 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -371,8 +681,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -388,32 +700,53 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		ECFBD5D31D5425AD001B0757 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD82A1E66456060F4F39A76D /* Pods-HopOn.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HopOn/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Kendy.HopOn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "HopOn/HopOn-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		ECFBD5D41D5425AD001B0757 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35910E6D1F4FF3474E87BEEA /* Pods-HopOn.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HopOn/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Kendy.HopOn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "HopOn/HopOn-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -425,6 +758,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Kendy.HopOnTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HopOn.app/HopOn";
 			};
 			name = Debug;
@@ -437,6 +771,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Kendy.HopOnTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HopOn.app/HopOn";
 			};
 			name = Release;
@@ -448,6 +783,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Kendy.HopOnUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = HopOn;
 			};
 			name = Debug;
@@ -459,6 +795,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Kendy.HopOnUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = HopOn;
 			};
 			name = Release;
@@ -482,6 +819,7 @@
 				ECFBD5D41D5425AD001B0757 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ECFBD5D51D5425AD001B0757 /* Build configuration list for PBXNativeTarget "HopOnTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +828,7 @@
 				ECFBD5D71D5425AD001B0757 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ECFBD5D81D5425AD001B0757 /* Build configuration list for PBXNativeTarget "HopOnUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +837,7 @@
 				ECFBD5DA1D5425AD001B0757 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

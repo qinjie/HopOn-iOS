@@ -9,9 +9,10 @@
 import UIKit
 import MapKit
 import CoreLocation
+import Alamofire
 
 protocol HandleMapSearch: class {
-    func dropPinZoomIn(placemark:MKPlacemark)
+    func dropPinZoomIn(_ placemark:MKPlacemark)
 }
 
 class ViewController: UIViewController {
@@ -24,14 +25,21 @@ class ViewController: UIViewController {
     var curLocation = CLLocationCoordinate2D()
     var resultSearchController: UISearchController!
     let locationManager = CLLocationManager()
+    var Transfer: UserDefaults!
+    let regionBeacon = CLBeaconRegion(proximityUUID: UUID(uuidString: "23A01AF0-232A-4518-9C0E-323FB773F5EF")!, identifier: "Sensoro")
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Transfer = UserDefaults()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
+        if (CLLocationManager.authorizationStatus() != CLAuthorizationStatus.authorizedWhenInUse) {
+            locationManager.requestWhenInUseAuthorization()
+        }
         locationManager.requestLocation()
-        let locationSearchTable = storyboard!.instantiateViewControllerWithIdentifier("LocationSearchTable") as! LocationSearchTable
+        locationManager.startRangingBeacons(in: regionBeacon)
+        let locationSearchTable = storyboard!.instantiateViewController(withIdentifier: "LocationSearchTable") as! LocationSearchTable
         resultSearchController = UISearchController(searchResultsController: locationSearchTable)
         resultSearchController.searchResultsUpdater = locationSearchTable
         let searchBar = resultSearchController!.searchBar
@@ -44,39 +52,94 @@ class ViewController: UIViewController {
         locationSearchTable.mapView = mapView
         locationSearchTable.handleMapSearchDelegate = self
         
+        loadData()
         
-        // PS example
-        let NPPS1 = CLLocationCoordinate2DMake(1.330200, 103.766458)
-        let pinPS1 = MKPointAnnotation()
-        pinPS1.coordinate = NPPS1
-        pinPS1.title = "NP Parking Station 1"
-        pinPS1.subtitle = "Available: 4"
-        mapView.addAnnotation(pinPS1)
+        btnCurrent.addTarget(self, action: #selector(btnCurrentAction), for: .touchUpInside)
+        btnCurrent.setTitle("", for: UIControlState())
+        btnCurrent.setImage(UIImage(named: "Geo-fence-30.png"), for: UIControlState())
         
-        
-        let NPPS2 = CLLocationCoordinate2DMake(1.332985, 103.777078)
-        let pinPS2 = MKPointAnnotation()
-        pinPS2.coordinate = NPPS2
-        pinPS2.title = "NP Parking Station 2"
-        pinPS2.subtitle = "Available: 2"
-        mapView.addAnnotation(pinPS2)
-        
-        btnCurrent.addTarget(self, action: #selector(btnCurrentAction), forControlEvents: .TouchUpInside)
-        btnCurrent.setTitle("", forState: UIControlState.Normal)
-        btnCurrent.setImage(UIImage(named: "Define Location-30.png"), forState: UIControlState.Normal)
+        let span = MKCoordinateSpanMake(0.02, 0.02)
+        let loc = CLLocationCoordinate2DMake((locationManager.location?.coordinate.latitude)!, (locationManager.location?.coordinate.longitude)!)
+        curLocation = (locationManager.location?.coordinate)!
+        let curRegion = MKCoordinateRegion(center: loc, span: span)
+        mapView.setRegion(curRegion, animated: true)
     }
     
-    func btnCurrentAction(sender: UIButton!) {
-        let span = MKCoordinateSpanMake(0.02, 0.02)
-        let region = MKCoordinateRegion(center: curLocation, span: span)
-        mapView.setRegion(region, animated: true)
+    func btnPickUpStationTapped(){
+        let pickUpLat = (Double)(Transfer.object(forKey: "pickUpLat") as! String)
+        let pickUpLong = (Double)(Transfer.object(forKey: "pickUpLong") as! String)
+        if (pickUpLat != 0.0 && pickUpLong != 0.0){
+            let pickUpStation = Transfer.object(forKey: "pickUpStation") as! String
+            let pickUpStationAvailable = Transfer.object(forKey: "pickUpStationAvailable") as! String
+            let pickUpStationCoor = CLLocationCoordinate2DMake(pickUpLat!, pickUpLong!)
+            let pickUpStationAnno = MKPointAnnotation()
+            pickUpStationAnno.coordinate = pickUpStationCoor
+            pickUpStationAnno.title = pickUpStation
+            pickUpStationAnno.subtitle = "Available: " + pickUpStationAvailable
+            mapView.addAnnotation(pickUpStationAnno)
+            
+            let span = MKCoordinateSpanMake(0.02, 0.02)
+            let loc = CLLocationCoordinate2DMake(pickUpLat!, pickUpLong!)
+            let region = MKCoordinateRegion(center: loc, span: span)
+            mapView.setRegion(region, animated: true)
+        }
+        else{
+            let span = MKCoordinateSpanMake(0.02, 0.02)
+            let loc = CLLocationCoordinate2DMake((locationManager.location?.coordinate.latitude)!, (locationManager.location?.coordinate.longitude)!)
+            curLocation = (locationManager.location?.coordinate)!
+            let region = MKCoordinateRegion(center: loc, span: span)
+            mapView.setRegion(region, animated: true)
+        }
+    }
+    
+    func loadData(){
+        let latitude = NSString(format: "%f", (locationManager.location?.coordinate.latitude)!)
+        let longitude = NSString(format: "%f", (locationManager.location?.coordinate.longitude)!)
+        let url = URL(string: Constants.baseURL + "/hopon-web/api/web/index.php/v1/station/search")
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer " + Constants.token,
+            "Accept": "application/json"
+        ]
+        let parameters: Parameters = [
+            "latitude" : latitude,
+            "longitude" : longitude
+        ]
+        
+        Alamofire.request(url!, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseString { response in
+            let statusCode = response.response?.statusCode
+            if (statusCode == 200){
+                let station = [Station](json: response.result.value)
+                Constants.station = station
+                DispatchQueue.main.async(execute: {
+                    for item in station{
+                        let dLat: Double = (Double)(item.latitude!)!
+                        let dLong: Double = (Double)(item.longitude!)!
+                        let Point = CLLocationCoordinate2DMake(dLat, dLong)
+                        let pin = MKPointAnnotation()
+                        pin.coordinate = Point
+                        pin.title = item.name
+                        pin.subtitle = "Available: " + item.available_bicycle!
+                        self.mapView.addAnnotation(pin)
+                    }
+                })
+            }
+        }
+
+    }
+    
+    func btnCurrentAction(_ sender: UIButton!) {
+        if (curLocation.latitude != 0.0 && curLocation.longitude != 0.0){
+            let span = MKCoordinateSpanMake(0.02, 0.02)
+            let region = MKCoordinateRegion(center: curLocation, span: span)
+            mapView.setRegion(region, animated: true)
+        }
     }
     
     func getDirections(){
         guard let selectedPin = selectedPin else { return }
         let mapItem = MKMapItem(placemark: selectedPin)
         let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking]
-        mapItem.openInMapsWithLaunchOptions(launchOptions)
+        mapItem.openInMaps(launchOptions: launchOptions)
     }
     
 }
@@ -84,21 +147,69 @@ class ViewController: UIViewController {
 
 extension ViewController : CLLocationManagerDelegate {
     
-    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-        if status == .AuthorizedWhenInUse {
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse {
             locationManager.requestLocation()
         }
     }
     
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.first else { return }
+    func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
+        let knownBeacons = beacons.filter{ $0.proximity != CLProximity.unknown }
+        var beaconList = [BeaconObj]()
+        var count = 0
+        for beacon in knownBeacons{
+            count = count + 1
+            let uuid = (String)(beacon.proximityUUID.uuidString)
+            let major = (String)(describing: beacon.major)
+            let minor = (String)(describing: beacon.minor)
+            let beaconObj = BeaconObj()
+            beaconObj.UUID = uuid
+            beaconObj.major = major
+            beaconObj.minor = minor
+            beaconList[count] = beaconObj
+        }
+        Constants.beaconList = beaconList
+//        if (knownBeacons.count > 0) {
+//            let closestBeacon = knownBeacons[0] as CLBeacon
+//            let uuid = (String)(closestBeacon.proximityUUID.uuidString)
+//            let major = (String)(describing: closestBeacon.major)
+//            let minor = (String)(describing: closestBeacon.minor)
+//            print((String)(major) + "-" + (String)(minor))
+//            self.Transfer.set(uuid, forKey: "uuid")
+//            self.Transfer.set(major, forKey: "major")
+//            self.Transfer.set(minor, forKey: "minor")
+//        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let pickUpLat = (Double)(Transfer.object(forKey: "pickUpLat") as! String)
+        let pickUpLong = (Double)(Transfer.object(forKey: "pickUpLong") as! String)
+        let pickUpStation = Transfer.object(forKey: "pickUpStation") as! String
+        
+        let location = locations.last! as CLLocation
         let span = MKCoordinateSpanMake(0.02, 0.02)
         let region = MKCoordinateRegion(center: location.coordinate, span: span)
         curLocation = location.coordinate
-        mapView.setRegion(region, animated: true)
+        if (pickUpLat != 0.0 && pickUpLong != 0.0){
+            let pickUpStationCoor = CLLocationCoordinate2DMake(pickUpLat!, pickUpLong!)
+            let pickUpStationAnno = MKPointAnnotation()
+            pickUpStationAnno.coordinate = pickUpStationCoor
+            pickUpStationAnno.title = pickUpStation
+            pickUpStationAnno.subtitle = "Available: 2"
+            mapView.addAnnotation(pickUpStationAnno)
+            
+            let loc = CLLocationCoordinate2DMake(pickUpLat!, pickUpLong!)
+            let region = MKCoordinateRegion(center: loc, span: span)
+            mapView.setRegion(region, animated: true)
+        }
+        else{
+            mapView.setRegion(region, animated: true)
+        }
+        Constants.curLat = (Double)((locationManager.location?.coordinate.latitude)!)
+        Constants.curLong = (Double)((locationManager.location?.coordinate.longitude)!)
     }
     
-    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("error:: \(error)")
     }
     
@@ -106,7 +217,7 @@ extension ViewController : CLLocationManagerDelegate {
 
 extension ViewController: HandleMapSearch {
     
-    func dropPinZoomIn(placemark: MKPlacemark){
+    func dropPinZoomIn(_ placemark: MKPlacemark){
         // cache the pin
         selectedPin = placemark
         // clear existing pins
@@ -135,24 +246,24 @@ extension ViewController: HandleMapSearch {
 
 extension ViewController : MKMapViewDelegate {
     
-    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView?{
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?{
         if annotation is MKUserLocation {
             return nil
         }
         let reuseId = "pin"
-        var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as? MKPinAnnotationView
+        var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId) as? MKPinAnnotationView
         pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
-        pinView?.pinTintColor = UIColor.orangeColor()
+        pinView?.pinTintColor = UIColor.orange
         pinView?.canShowCallout = true
         let smallSquare = CGSize(width: 30, height: 30)
-        let button = UIButton(frame: CGRect(origin: CGPointZero, size: smallSquare))
-        button.setBackgroundImage(UIImage(named: "car"), forState: .Normal)
-        button.addTarget(self, action: #selector(ViewController.getDirections), forControlEvents: .TouchUpInside)
+        let button = UIButton(frame: CGRect(origin: CGPoint.zero, size: smallSquare))
+        button.setBackgroundImage(UIImage(named: "bicycle"), for: UIControlState())
+        button.addTarget(self, action: #selector(ViewController.getDirections), for: .touchUpInside)
         pinView?.leftCalloutAccessoryView = button
         return pinView
     }
     
-    func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         let selectedLoc = view.annotation
         selectedPin = MKPlacemark(coordinate: selectedLoc!.coordinate, addressDictionary: nil)
         

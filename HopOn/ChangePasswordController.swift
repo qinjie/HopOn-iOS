@@ -7,29 +7,59 @@
 //
 
 import UIKit
+import Alamofire
 
 class ChangePasswordController: UIViewController {
 
+    @IBOutlet weak var txtOldPass: UITextField!
+    @IBOutlet weak var txtNewPass1: UITextField!
+    @IBOutlet weak var txtNewPass2: UITextField!
+    @IBOutlet weak var txtErrorMessage: UILabel!
+    var Transfer: UserDefaults!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        Transfer = UserDefaults()
+        txtErrorMessage.text = ""
+        
     }
+    @IBAction func btnSubmitTapped(_ sender: AnyObject) {
+        if (self.txtNewPass1.text != self.txtNewPass2.text){
+            self.txtErrorMessage.text = "Repeat password is not match!"
+        }
+        else{
+            let url = URL(string: Constants.baseURL + "/hopon-web/api/web/index.php/v1/user/change-password")
+            let headers: HTTPHeaders = [
+                "Authorization": "Bearer " + Constants.token,
+                "Accept": "application/json"
+            ]
+            let parameters: Parameters = [
+                "oldPassword" : self.txtOldPass.text!,
+                "newPassword" : self.txtNewPass1.text!
+            ]
+            
+            Alamofire.request(url!, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
+                let statusCode = response.response?.statusCode
+                if (statusCode == 200){
+                    DispatchQueue.main.async(execute: {
+                        let alertController = UIAlertController(title: "", message:
+                            "Change password successfully", preferredStyle: UIAlertControllerStyle.alert)
+                        alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
+                        
+                        self.present(alertController, animated: true, completion: nil)
+                    })
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+                }
+                else{
+                    DispatchQueue.main.async(execute: {
+                        self.txtErrorMessage.text = "Incorrect data!"
+                    })
+                }
+            }
+
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
-    */
-
 }

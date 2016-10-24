@@ -7,29 +7,42 @@
 //
 
 import UIKit
+import Alamofire
 
 class SettingController: UIViewController {
-
+    
+    @IBOutlet weak var txtFullName: UILabel!
+    @IBOutlet weak var txtEmail: UILabel!
+    @IBOutlet weak var txtPhone: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        txtFullName.text = Constants.fullname
+        loadData()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func loadData(){
+        let url = URL(string: Constants.baseURL + "/hopon-web/api/web/index.php/v1/user/profile")
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer " + Constants.token,
+            "Accept": "application/json"
+        ]
+        let parameters: Parameters = ["":""]
+        
+        Alamofire.request(url!, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
+            let statusCode = response.response?.statusCode
+            if (statusCode == 200){
+                if let JSON = response.result.value as? [String: Any] {
+                    let email = JSON["email"] as! String
+                    let phone = JSON["mobile"] as! String
+                    DispatchQueue.main.async(execute: {
+                        self.txtEmail.text = email
+                        self.txtPhone.text = phone
+                    })
+                }
+            }
+        }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func btnSignOut(_ sender: AnyObject) {
+        Constants.fullname = ""
+        Constants.token = ""
     }
-    */
-
 }
