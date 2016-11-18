@@ -23,10 +23,13 @@ class BookedDetailController: UIViewController {
     @IBOutlet weak var txtDuration: UILabel!
     @IBOutlet weak var btnPickUpStation: UIButton!
     @IBOutlet weak var btnReturnStation: UIButton!
+    var Transfer: UserDefaults!
+    
     var data: History!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Transfer = UserDefaults()
         btnPickUpStation.setImage(UIImage(named: "Geo-fence-30.png"), for: UIControlState())
         btnReturnStation.setImage(UIImage(named: "Geo-fence-30.png"), for: UIControlState())
         txtBooking_id.text = data.booking_id
@@ -40,4 +43,21 @@ class BookedDetailController: UIViewController {
         txtDuration.text = data.duration
     }
 
+    @IBAction func btnPickUpStationTapped(_ sender: AnyObject) {
+        self.Transfer.set(data.pickup_station_lat as String, forKey: "pickUpLat")
+        self.Transfer.set(data.pickup_station_lng as String, forKey: "pickUpLong")
+        let secondTab = self.tabBarController?.viewControllers![0] as! HomeNavigationController
+        secondTab.btnPickUpStationTapped()
+        self.tabBarController!.selectedIndex = 0
+    }
+    
+    @IBAction func btnReturnStationTapped(_ sender: AnyObject) {
+        self.Transfer.set(data.return_station_lat as String, forKey: "pickUpLat")
+        self.Transfer.set(data.return_station_lng as String, forKey: "pickUpLong")
+        let secondTab = self.tabBarController?.viewControllers![0] as! HomeNavigationController
+        secondTab.btnPickUpStationTapped()
+        self.tabBarController!.selectedIndex = 0
+    }
+    
+    
 }

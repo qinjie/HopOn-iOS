@@ -12,13 +12,10 @@ class HomeNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     func btnPickUpStationTapped(){
         let secondTab = self.topViewController as! ViewController
         secondTab.btnPickUpStationTapped()
     }
-
-
 }

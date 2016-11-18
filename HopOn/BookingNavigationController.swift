@@ -20,5 +20,18 @@ class BookingNavigationController: UINavigationController {
         let secondTab = self.topViewController as! BookingController
         secondTab.loadData()
     }
+    
+    func afterFeedback(){
+        self.popToRootViewController(animated: true)
+        let secondTab = self.topViewController as! BookingController
+        secondTab.viewEmpty.isHidden = false
+    }
+    
+    func disconnectBean(){
+        self.popToRootViewController(animated: true)
+        let secondTab = self.topViewController as! BookingController
+        secondTab.bicycle_serial = ""
+        secondTab.disconnectBean()
+    }
 
 }

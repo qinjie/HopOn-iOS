@@ -13,4 +13,18 @@ class StationListNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    func loadData(){
+        let secondTab = self.topViewController as! StationListController
+        secondTab.loadData()
+    }
+    
+    func btnDetailTapped(station_id: Int){
+        let secondTab = self.topViewController as! StationListController
+        secondTab.btnDetailTapped(station_id: station_id)
+    }
+    
+    func afterBook(){
+        self.popToRootViewController(animated: true)
+    }
 }

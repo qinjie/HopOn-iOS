@@ -12,18 +12,16 @@ class StationCell: UITableViewCell {
 
     @IBOutlet weak var txtName: UILabel!
     @IBOutlet weak var txtAvailable: UILabel!
-    @IBOutlet weak var txtTotal: UILabel!
     @IBOutlet weak var txtAddress: UILabel!
     @IBOutlet weak var txtDistance: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        txtDistance.layer.cornerRadius = 3
-        txtDistance.layer.borderWidth = 1
-        txtDistance.layer.borderColor = UIColor.white.cgColor
+        txtDistance.layer.cornerRadius = 4
+        txtDistance.clipsToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+        //super.setSelected(selected, animated: animated)
     }
 
 }

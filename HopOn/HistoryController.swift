@@ -16,8 +16,17 @@ class HistoryController: UIViewController, UITableViewDelegate, UITableViewDataS
     var refreshControl: UIRefreshControl!
     var Transfer: UserDefaults!
     var historyArray = [History]()
+    let alertController = UIAlertController(title: nil, message: "Please wait\n\n", preferredStyle: UIAlertControllerStyle.alert)
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Wating dialog
+        let spinnerIndicator: UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
+        spinnerIndicator.center = CGPoint(x: 135.0, y: 65.5)
+        spinnerIndicator.color = UIColor.black
+        spinnerIndicator.startAnimating()
+        alertController.view.addSubview(spinnerIndicator)
+        self.present(alertController, animated: false, completion: nil)
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(loadData), for: UIControlEvents.valueChanged)
         tableView.addSubview(refreshControl)
@@ -41,6 +50,7 @@ class HistoryController: UIViewController, UITableViewDelegate, UITableViewDataS
                 DispatchQueue.main.async(execute: {
                     self.refreshControl.endRefreshing()
                     self.tableView .reloadData()
+                    self.alertController.dismiss(animated: true, completion: nil)
                 })
             }
         }
@@ -52,8 +62,6 @@ class HistoryController: UIViewController, UITableViewDelegate, UITableViewDataS
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! HistoryCell
-        cell.txtBooking_id.text = historyArray[(indexPath as NSIndexPath).row].booking_id
-        cell.txtBrand_model.text = historyArray[(indexPath as NSIndexPath).row].brand + "/" + historyArray[(indexPath as NSIndexPath).row].model
         cell.txtBooked_at.text = historyArray[(indexPath as NSIndexPath).row].book_at
         cell.txtBooked_add.text = historyArray[(indexPath as NSIndexPath).row].pickup_station_name
         cell.txtReturn_add.text = historyArray[(indexPath as NSIndexPath).row].return_station_name

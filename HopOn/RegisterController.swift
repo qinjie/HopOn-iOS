@@ -16,11 +16,17 @@ class RegisterController: UIViewController {
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtMobile: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
+    @IBOutlet weak var btnContinue: UIButton!
     var Transfer: UserDefaults!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         Transfer = UserDefaults()
         txtErrorMessage.text = ""
+        //txtName.layer.cornerRadius = 20.0
+        //txtName.layer.borderWidth = 1.0
+        //txtPassword.layer.borderColor = UIColor.white.cgColor.copy(alpha: 0.35)
+        btnContinue.layer.cornerRadius = 5.0
     }
     
     @IBAction func btnContinueTapped(_ sender: AnyObject) {
@@ -28,13 +34,14 @@ class RegisterController: UIViewController {
             txtErrorMessage.text = "Please insert all feild before Continue"
         }
         else{
+            txtErrorMessage.text = ""
             let url = URL(string: Constants.baseURL + "/hopon-web/api/web/index.php/v1/user/signup")
             let headers: HTTPHeaders = ["":""]
             let parameters: Parameters = [
-                "fullname" : self.txtName.text,
-                "email" : self.txtEmail.text,
-                "mobile" : self.txtMobile.text,
-                "password" : self.txtPassword.text
+                "fullname" : self.txtName.text!,
+                "email" : self.txtEmail.text!,
+                "mobile" : self.txtMobile.text!,
+                "password" : self.txtPassword.text!
             ]
             
             Alamofire.request(url!, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { response in

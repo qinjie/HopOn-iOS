@@ -8,9 +8,11 @@
 
 import Foundation
 import EVReflection
+import Alamofire
+import MapKit
 
 struct Constants {
-    static let baseURL = "http://153.20.44.136"
+    static let baseURL = "http://188.166.247.154"
     static var token = ""
     static var fullname = ""
     static var curLat = 0.0
@@ -53,17 +55,73 @@ class Station: EVObject {
     var bicycle_count: String!
     var available_bicycle: String!
     var distanceText: String!
-    var distanceValue: Int!
+    var distanceValue: String!
 }
 
-class Bicycle: EVObject {
+class Bicycle: EVObject, EVArrayConvertable {
     var bicycle_type_id: String!
     var brand: String!
     var model: String!
+    var desc: String!
+    var availableBicycle: String!
+    var totalBicycle: String!
+    var listImageUrl: Array<String> = Array()
+    
+    func convertArray(_ key: String, array: Any) -> NSArray {
+        switch key {
+        case "listImageUrl":
+            print("\(array)")
+        default:
+            break
+        }
+        return []
+    }
 }
 
-class BeaconObj: EVObject {
-    var UUID: String!
+struct BeaconObj {
+    var uuid: String!
     var major: String!
     var minor: String!
+    var rssi: String!
+    static func jsonArray(array : [BeaconObj]) -> [Parameters]
+    {
+        var result: [Parameters] = []
+        for item in array{
+            result.append(item.jsonRepresentation)
+        }
+        return result
+    }
+    
+    var jsonRepresentation : Parameters {
+        return [
+            "uuid" : uuid,
+            "major" : major,
+            "minor" : minor,
+            "rssi" : rssi
+        ]
+    }
+}
+
+class StationAnno: NSObject, MKAnnotation {
+    var title: String?
+    var coordinate: CLLocationCoordinate2D
+    var subtitle: String?
+    
+    init(title: String, coordinate: CLLocationCoordinate2D, subtitle: String) {
+        self.title = title
+        self.coordinate = coordinate
+        self.subtitle = subtitle
+    }
+}
+
+class SearchAnno: NSObject, MKAnnotation {
+    var title: String?
+    var coordinate: CLLocationCoordinate2D
+    var subtitle: String?
+    
+    init(title: String, coordinate: CLLocationCoordinate2D, subtitle: String) {
+        self.title = title
+        self.coordinate = coordinate
+        self.subtitle = subtitle
+    }
 }

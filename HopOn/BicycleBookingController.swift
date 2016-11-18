@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import AlamofireImage
 
 class BicycleBookingController: UIViewController {
 
@@ -19,6 +20,8 @@ class BicycleBookingController: UIViewController {
     @IBOutlet weak var txtNext: UIButton!
     @IBOutlet weak var txtBook: UIButton!
     @IBOutlet weak var txtAlert: UILabel!
+    @IBOutlet weak var img1: UIImageView!
+    @IBOutlet weak var img2: UIImageView!
     
     var bicycleArray = [Bicycle]()
     var Transfer: UserDefaults!
@@ -28,8 +31,17 @@ class BicycleBookingController: UIViewController {
     var station_id: String = ""
     var total: Int = 0
     var totalTxt: String = ""
+    var alertController = UIAlertController(title: nil, message: "Please wait\n\n", preferredStyle: UIAlertControllerStyle.alert)
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Wating dialog
+        let spinnerIndicator: UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
+        spinnerIndicator.center = CGPoint(x: 135.0, y: 65.5)
+        spinnerIndicator.color = UIColor.black
+        spinnerIndicator.startAnimating()
+        alertController.view.addSubview(spinnerIndicator)
+        self.present(alertController, animated: false, completion: nil)
+
         txtBook.layer.cornerRadius = 4
         txtBook.layer.borderWidth = 1
         txtBook.layer.borderColor = UIColor.white.cgColor
@@ -51,6 +63,10 @@ class BicycleBookingController: UIViewController {
         number -= 1
         txtNumber.text = (String)(number + 1) + "/" + totalTxt
         txtBrandModel.text = bicycleArray[number].brand + "/" + bicycleArray[number].model
+        let url1 = URL(string: bicycleArray[number].listImageUrl[0])
+        let url2 = URL(string: bicycleArray[number].listImageUrl[1])
+        self.downloadImage(url: url1!, view: self.img1)
+        self.downloadImage(url: url2!, view: self.img2)
     }
     @IBAction func btnNextTapped(_ sender: AnyObject) {
         if (number == bicycleArray.count - 2){
@@ -60,8 +76,20 @@ class BicycleBookingController: UIViewController {
         number += 1
         txtNumber.text = (String)(number + 1) + "/" + totalTxt
         txtBrandModel.text = bicycleArray[number].brand + "/" + bicycleArray[number].model
+        let url1 = URL(string: bicycleArray[number].listImageUrl[0])
+        let url2 = URL(string: bicycleArray[number].listImageUrl[1])
+        self.downloadImage(url: url1!, view: self.img1)
+        self.downloadImage(url: url2!, view: self.img2)
     }
     @IBAction func btnBookTapped(_ sender: AnyObject) {
+        //Wating dialog
+        alertController = UIAlertController(title: nil, message: "Please wait\n\n", preferredStyle: UIAlertControllerStyle.alert)
+        let spinnerIndicator: UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.whiteLarge)
+        spinnerIndicator.center = CGPoint(x: 135.0, y: 65.5)
+        spinnerIndicator.color = UIColor.black
+        spinnerIndicator.startAnimating()
+        alertController.view.addSubview(spinnerIndicator)
+        self.present(alertController, animated: false, completion: nil)
         if (self.bicycleArray.count > 0){
             let url = URL(string: Constants.baseURL + "/hopon-web/api/web/index.php/v1/bicycle/book")
             let headers: HTTPHeaders = [
@@ -76,13 +104,18 @@ class BicycleBookingController: UIViewController {
                 let statusCode = response.response?.statusCode
                 if (statusCode == 200){
                     let secondTab = self.tabBarController?.viewControllers![2] as! BookingNavigationController
+                    secondTab.disconnectBean()
                     secondTab.loadData()
                     DispatchQueue.main.async(execute: {
+                        let secondTab = self.tabBarController?.viewControllers![1] as! StationListNavigationController
+                        secondTab.afterBook()
+                        self.alertController.dismiss(animated: true, completion: nil)
                         self.tabBarController!.selectedIndex = 2
                     })
                 }
                 else{
                     DispatchQueue.main.async(execute: {
+                        self.alertController.dismiss(animated: true, completion: nil)
                         self.txtAlert.text = "Server error!"
                     })
                 }
@@ -112,8 +145,32 @@ class BicycleBookingController: UIViewController {
                         if (self.bicycleArray.count > 1){
                             self.txtNext.isEnabled = true
                         }
+                        let url1 = URL(string: self.bicycleArray[self.number].listImageUrl[0])
+                        let url2 = URL(string: self.bicycleArray[self.number].listImageUrl[1])
+                        self.downloadImage(url: url1!, view: self.img1)
+                        self.downloadImage(url: url2!, view: self.img2)
+                        self.alertController.dismiss(animated: true, completion: nil)
+                    }
+                    else{
+                        DispatchQueue.main.async(execute: {
+                            self.alertController.dismiss(animated: true, completion: nil)
+                        })
                     }
                 })
+            }
+        }
+    }
+    func downloadImage(url: URL, view: UIImageView) {
+        Alamofire.request(url, method: .get).responseData { response in
+            debugPrint(response)
+            print(response.request)
+            print(response.response)
+            debugPrint(response.result)
+            
+            if let data = response.result.value {
+                DispatchQueue.main.async() { () -> Void in
+                    view.image = UIImage(data: data)
+                }
             }
         }
     }

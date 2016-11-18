@@ -3,13 +3,51 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "BicycleBookingController.(loadData() -&gt; ()).(closure #1):BicycleBookingController.swift">
+         contextName = "SettingController.viewDidLoad() -&gt; ():SettingController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "url">
+               value = "Constants.fullname">
             </PersistentString>
             <PersistentString
-               value = "station_id">
+               value = "Constants.beaconList">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "BookingController.viewDidAppear(Bool) -&gt; ():BookingController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "yourBean">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "BookingController.beanManager(PTDBeanManager!, didDiscover : PTDBean!, error : Error!) -&gt; ():BookingController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "bicycle_serial">
+            </PersistentString>
+            <PersistentString
+               value = "yourBean">
+            </PersistentString>
+            <PersistentString
+               value = "bean.name">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.locationManager(CLLocationManager, didRangeBeacons : [CLBeacon], in : CLBeaconRegion) -&gt; ():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "Constants.beaconList">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.dropPinZoomIn(MKPlacemark) -&gt; ():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "lastAnno">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -22,10 +60,116 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "BookingController.sendSerialData(beanState : NSData) -&gt; ():BookingController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "beanState">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "StationListController.tableView(UITableView, cellForRowAt : IndexPath) -&gt; UITableViewCell:StationListController.swift">
          <PersistentStrings>
             <PersistentString
                value = "stationArray">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "BicycleBookingController.(loadData() -&gt; ()).(closure #1):BicycleBookingController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "url">
+            </PersistentString>
+            <PersistentString
+               value = "station_id">
+            </PersistentString>
+            <PersistentString
+               value = "bicycleArray">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "BicycleBookingController.downloadImage(url : URL, view : UIImageView) -&gt; ():BicycleBookingController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "url">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "StationListController.tableView(UITableView, didSelectRowAt : IndexPath) -&gt; ():StationListController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "BookingController.loadData() -&gt; ():BookingController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "Constants.beaconList">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "BookingController.btnUnlockTapped(AnyObject) -&gt; ():BookingController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "query">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "BookingController.(btnReturnTapped(AnyObject) -&gt; ()).(closure #1):BookingController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "print(response.result.value)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "FeedbackController.btnSubmitTapped(AnyObject) -&gt; ():FeedbackController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "HistoryController.(loadData() -&gt; ()).(closure #1):HistoryController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.historyArray">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "StationListController.btnDetailTapped(station_id : String) -&gt; ():StationListController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "BicycleBookingController.(loadData() -&gt; ()).(closure #1).(closure #1):BicycleBookingController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.bicycleArray[self.number]">
+            </PersistentString>
+            <PersistentString
+               value = "self.bicycleArray.count ">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "StationListController.viewDidLoad() -&gt; ():StationListController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "stationArray.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "BookingController.(loadData() -&gt; ()).(closure #1).(closure #1):BookingController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "Transfer.object(forKey: &quot;pickUpStationAvailable&quot;)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "BicycleBookingController.(downloadImage(url : URL, view : UIImageView) -&gt; ()).(closure #1):BicycleBookingController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "response.result.value">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -36,6 +180,17 @@
                value = "Constants.curLat">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "BookingController.(loadData() -&gt; ()).(closure #1):BookingController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "print(response.result.value)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "BookingController.btnReturnTapped(AnyObject) -&gt; ():BookingController.swift">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

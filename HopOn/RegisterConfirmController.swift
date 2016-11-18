@@ -14,8 +14,11 @@ class RegisterConfirmController: UIViewController {
     @IBOutlet weak var txtCode: UILabel!
     @IBOutlet weak var txtErrorMessage: UILabel!
     @IBOutlet weak var txtActiveCode: UITextField!
+    @IBOutlet weak var txtResent: UIButton!
+    @IBOutlet weak var txtSignUp: UIButton!
     var email:String = ""
     var Transfer: UserDefaults!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         Transfer = UserDefaults()
@@ -24,9 +27,12 @@ class RegisterConfirmController: UIViewController {
         txtCode.text = "A code has been sent to your email address " + email
         txtCode.lineBreakMode = NSLineBreakMode.byWordWrapping
         txtCode.numberOfLines = 3
+        txtResent.layer.cornerRadius = 5.0
+        txtSignUp.layer.cornerRadius = 5.0
     }
     
     @IBAction func btnResentTapped(_ sender: AnyObject) {
+        txtErrorMessage.text = ""
         let url = URL(string: Constants.baseURL + "/hopon-web/api/web/index.php/v1/user/resend-email")
         let headers: HTTPHeaders = ["":""]
         let parameters: Parameters = [
@@ -56,11 +62,12 @@ class RegisterConfirmController: UIViewController {
             self.txtErrorMessage.text = "Please enter your active code"
         }
         else{
+            txtErrorMessage.text = ""
             let url = URL(string: Constants.baseURL + "/hopon-web/api/web/index.php/v1/user/activate")
             let headers: HTTPHeaders = ["":""]
             let parameters: Parameters = [
                 "email" : self.email,
-                "token" : self.txtActiveCode.text
+                "token" : self.txtActiveCode.text!
             ]
             
             Alamofire.request(url!, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { response in

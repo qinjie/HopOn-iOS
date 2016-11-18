@@ -15,11 +15,22 @@ class ChangePasswordController: UIViewController {
     @IBOutlet weak var txtNewPass1: UITextField!
     @IBOutlet weak var txtNewPass2: UITextField!
     @IBOutlet weak var txtErrorMessage: UILabel!
+    @IBOutlet weak var txtSubmit: UIButton!
+    @IBOutlet weak var viewOldPass: UIView!
+    @IBOutlet weak var viewNewPass: UIView!
     var Transfer: UserDefaults!
     override func viewDidLoad() {
         super.viewDidLoad()
         Transfer = UserDefaults()
         txtErrorMessage.text = ""
+        txtSubmit.layer.cornerRadius = 4
+        txtOldPass.layer.cornerRadius = 4
+        viewOldPass.layer.cornerRadius = 4
+        viewOldPass.layer.borderColor = UIColor.gray.withAlphaComponent(0.5).cgColor
+        viewOldPass.layer.borderWidth = 1
+        viewNewPass.layer.cornerRadius = 4
+        viewNewPass.layer.borderColor = UIColor.gray.withAlphaComponent(0.5).cgColor
+        viewNewPass.layer.borderWidth = 1
         
     }
     @IBAction func btnSubmitTapped(_ sender: AnyObject) {
@@ -27,6 +38,7 @@ class ChangePasswordController: UIViewController {
             self.txtErrorMessage.text = "Repeat password is not match!"
         }
         else{
+            txtErrorMessage.text = ""
             let url = URL(string: Constants.baseURL + "/hopon-web/api/web/index.php/v1/user/change-password")
             let headers: HTTPHeaders = [
                 "Authorization": "Bearer " + Constants.token,

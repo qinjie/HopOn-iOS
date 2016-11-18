@@ -14,9 +14,25 @@ class SettingController: UIViewController {
     @IBOutlet weak var txtFullName: UILabel!
     @IBOutlet weak var txtEmail: UILabel!
     @IBOutlet weak var txtPhone: UILabel!
+    @IBOutlet weak var viewInfo: UIView!
+    @IBOutlet weak var txtPassword: UIButton!
+    @IBOutlet weak var txtSignOut: UIButton!
+    @IBOutlet weak var txtChangeEmail: UIButton!
+    @IBOutlet weak var viewControl: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         txtFullName.text = Constants.fullname
+        viewInfo.layer.borderWidth = 1
+        viewInfo.layer.borderColor = UIColor.gray.withAlphaComponent(0.5).cgColor
+        viewControl.layer.borderWidth = 1
+        viewControl.layer.borderColor = UIColor.gray.withAlphaComponent(0.5).cgColor
+        txtSignOut.layer.borderWidth = 1
+        txtSignOut.layer.borderColor = UIColor.gray.withAlphaComponent(0.5).cgColor
+        txtChangeEmail.titleEdgeInsets = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 0)
+        txtPassword.titleEdgeInsets = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 0)
+        txtSignOut.layer.cornerRadius = 2
+        viewControl.layer.cornerRadius = 2
+        viewInfo.layer.cornerRadius = 2
         loadData()
     }
     func loadData(){

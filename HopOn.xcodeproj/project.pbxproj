@@ -10,36 +10,40 @@
 		AB225A2DE64072332F79D4FE /* Pods_HopOn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9DAE98628737E93906B4EB /* Pods_HopOn.framework */; };
 		EC02B1421D62B5DB0032A3C0 /* StationListNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC02B1411D62B5DB0032A3C0 /* StationListNavigationController.swift */; };
 		EC02B1441D62BF070032A3C0 /* BicycleBookingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC02B1431D62BF070032A3C0 /* BicycleBookingController.swift */; };
+		EC36EE941DD4005F00B7F5A6 /* Bicycle.png in Resources */ = {isa = PBXBuildFile; fileRef = EC36EE931DD4005F00B7F5A6 /* Bicycle.png */; };
+		EC36EE981DD56FC000B7F5A6 /* 404.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC36EE971DD56FC000B7F5A6 /* 404.jpg */; };
 		EC3AFCB91D66E87B00E016C3 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC3AFCB81D66E87B00E016C3 /* RatingControl.swift */; };
+		EC53FC541DBF21A3007997F8 /* SwiftLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC53FC531DBF21A3007997F8 /* SwiftLoading.swift */; };
 		EC55B5E41D66ADD100371E81 /* BookingNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC55B5E31D66ADD100371E81 /* BookingNavigationController.swift */; };
 		EC55B5EC1D66D9B900371E81 /* FeedbackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC55B5EB1D66D9B900371E81 /* FeedbackController.swift */; };
 		EC55B5F21D66E13400371E81 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC55B5F11D66E13400371E81 /* CheckBox.swift */; };
+		EC86FCAE1DCADD830068CE92 /* Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = EC86FCAD1DCADD830068CE92 /* Arrow.png */; };
+		EC86FCBA1DCC76F20068CE92 /* Location.png in Resources */ = {isa = PBXBuildFile; fileRef = EC86FCB91DCC76F20068CE92 /* Location.png */; };
+		EC86FCBC1DD061810068CE92 /* Close.png in Resources */ = {isa = PBXBuildFile; fileRef = EC86FCBB1DD061810068CE92 /* Close.png */; };
+		EC86FCBE1DD062BC0068CE92 /* Back.png in Resources */ = {isa = PBXBuildFile; fileRef = EC86FCBD1DD062BC0068CE92 /* Back.png */; };
 		EC8A3A0D1D5AFCEC007BA73B /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8A3A0C1D5AFCEC007BA73B /* HistoryCell.swift */; };
 		EC8A955C1D6172520095BAE3 /* StationListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8A955B1D6172520095BAE3 /* StationListController.swift */; };
 		EC8A955E1D61726F0095BAE3 /* StationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8A955D1D61726F0095BAE3 /* StationCell.swift */; };
+		EC90780D1DD989BD00EB5BF1 /* Get-Direction.png in Resources */ = {isa = PBXBuildFile; fileRef = EC90780C1DD989BD00EB5BF1 /* Get-Direction.png */; };
 		EC9C71301D658D6E000DA77B /* HomeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9C712F1D658D6E000DA77B /* HomeNavigationController.swift */; };
-		ECBAD92D1D6D7A0B00C99EC7 /* 404.gif in Resources */ = {isa = PBXBuildFile; fileRef = ECBAD91D1D6D7A0B00C99EC7 /* 404.gif */; };
+		ECB3F72F1DC88B9B009F8F9E /* Background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ECB3F72E1DC88B9B009F8F9E /* Background.jpg */; };
 		ECBAD92E1D6D7A0B00C99EC7 /* Backgroud.png in Resources */ = {isa = PBXBuildFile; fileRef = ECBAD91E1D6D7A0B00C99EC7 /* Backgroud.png */; };
 		ECBAD92F1D6D7A0B00C99EC7 /* Bicycle-30.png in Resources */ = {isa = PBXBuildFile; fileRef = ECBAD91F1D6D7A0B00C99EC7 /* Bicycle-30.png */; };
-		ECBAD9301D6D7A0B00C99EC7 /* Bicycle-100.png in Resources */ = {isa = PBXBuildFile; fileRef = ECBAD9201D6D7A0B00C99EC7 /* Bicycle-100.png */; };
 		ECBAD9311D6D7A0B00C99EC7 /* Bicycle-Demo-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ECBAD9211D6D7A0B00C99EC7 /* Bicycle-Demo-1.jpg */; };
 		ECBAD9321D6D7A0B00C99EC7 /* Bicycle-Demo-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ECBAD9221D6D7A0B00C99EC7 /* Bicycle-Demo-2.jpg */; };
 		ECBAD9331D6D7A0B00C99EC7 /* Checked.png in Resources */ = {isa = PBXBuildFile; fileRef = ECBAD9231D6D7A0B00C99EC7 /* Checked.png */; };
 		ECBAD9341D6D7A0B00C99EC7 /* emptyStar.png in Resources */ = {isa = PBXBuildFile; fileRef = ECBAD9241D6D7A0B00C99EC7 /* emptyStar.png */; };
 		ECBAD9351D6D7A0B00C99EC7 /* filledStar.png in Resources */ = {isa = PBXBuildFile; fileRef = ECBAD9251D6D7A0B00C99EC7 /* filledStar.png */; };
 		ECBAD9361D6D7A0B00C99EC7 /* Geo-fence-30.png in Resources */ = {isa = PBXBuildFile; fileRef = ECBAD9261D6D7A0B00C99EC7 /* Geo-fence-30.png */; };
-		ECBAD9371D6D7A0B00C99EC7 /* Home-30.png in Resources */ = {isa = PBXBuildFile; fileRef = ECBAD9271D6D7A0B00C99EC7 /* Home-30.png */; };
-		ECBAD9381D6D7A0B00C99EC7 /* List-30.png in Resources */ = {isa = PBXBuildFile; fileRef = ECBAD9281D6D7A0B00C99EC7 /* List-30.png */; };
-		ECBAD9391D6D7A0B00C99EC7 /* Parking-30.png in Resources */ = {isa = PBXBuildFile; fileRef = ECBAD9291D6D7A0B00C99EC7 /* Parking-30.png */; };
-		ECBAD93A1D6D7A0B00C99EC7 /* Settings-30.png in Resources */ = {isa = PBXBuildFile; fileRef = ECBAD92A1D6D7A0B00C99EC7 /* Settings-30.png */; };
 		ECBAD93B1D6D7A0B00C99EC7 /* Unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = ECBAD92B1D6D7A0B00C99EC7 /* Unchecked.png */; };
-		ECBAD93C1D6D7A0B00C99EC7 /* User-30.png in Resources */ = {isa = PBXBuildFile; fileRef = ECBAD92C1D6D7A0B00C99EC7 /* User-30.png */; };
 		ECC4E4EA1D58168A000B80AE /* ChangePasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC4E4E91D58168A000B80AE /* ChangePasswordController.swift */; };
 		ECC4E4EC1D581C3A000B80AE /* BookedDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC4E4EB1D581C3A000B80AE /* BookedDetailController.swift */; };
 		ECC4E4F01D5820C6000B80AE /* RegisterConfirmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC4E4EF1D5820C6000B80AE /* RegisterConfirmController.swift */; };
 		ECC4E4F81D582EE8000B80AE /* HistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC4E4F71D582EE8000B80AE /* HistoryController.swift */; };
 		ECC4E4FA1D5855AF000B80AE /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC4E4F91D5855AF000B80AE /* LocationSearchTable.swift */; };
 		ECF6C87A1D5C0F7B000B4363 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF6C8791D5C0F7B000B4363 /* TabBarController.swift */; };
+		ECF836851DC2E53900C18325 /* State_Fail.png in Resources */ = {isa = PBXBuildFile; fileRef = ECF836831DC2E53900C18325 /* State_Fail.png */; };
+		ECF836861DC2E53900C18325 /* State_OK.png in Resources */ = {isa = PBXBuildFile; fileRef = ECF836841DC2E53900C18325 /* State_OK.png */; };
 		ECFBD5AE1D5425AD001B0757 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFBD5AD1D5425AD001B0757 /* AppDelegate.swift */; };
 		ECFBD5B01D5425AD001B0757 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFBD5AF1D5425AD001B0757 /* ViewController.swift */; };
 		ECFBD5B31D5425AD001B0757 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECFBD5B11D5425AD001B0757 /* Main.storyboard */; };
@@ -79,36 +83,40 @@
 		EC02B1411D62B5DB0032A3C0 /* StationListNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationListNavigationController.swift; sourceTree = "<group>"; };
 		EC02B1431D62BF070032A3C0 /* BicycleBookingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BicycleBookingController.swift; sourceTree = "<group>"; };
 		EC198ADB1DB4C71B00D83A23 /* HopOn-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HopOn-Bridging-Header.h"; sourceTree = "<group>"; };
+		EC36EE931DD4005F00B7F5A6 /* Bicycle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bicycle.png; path = Images/Bicycle.png; sourceTree = "<group>"; };
+		EC36EE971DD56FC000B7F5A6 /* 404.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 404.jpg; path = Images/404.jpg; sourceTree = "<group>"; };
 		EC3AFCB81D66E87B00E016C3 /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
+		EC53FC531DBF21A3007997F8 /* SwiftLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftLoading.swift; sourceTree = "<group>"; };
 		EC55B5E31D66ADD100371E81 /* BookingNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingNavigationController.swift; sourceTree = "<group>"; };
 		EC55B5EB1D66D9B900371E81 /* FeedbackController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackController.swift; sourceTree = "<group>"; };
 		EC55B5F11D66E13400371E81 /* CheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		EC86FCAD1DCADD830068CE92 /* Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Arrow.png; path = Images/Arrow.png; sourceTree = "<group>"; };
+		EC86FCB91DCC76F20068CE92 /* Location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Location.png; path = Images/Location.png; sourceTree = "<group>"; };
+		EC86FCBB1DD061810068CE92 /* Close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Close.png; path = Images/Close.png; sourceTree = "<group>"; };
+		EC86FCBD1DD062BC0068CE92 /* Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Back.png; path = Images/Back.png; sourceTree = "<group>"; };
 		EC8A3A0C1D5AFCEC007BA73B /* HistoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
 		EC8A955B1D6172520095BAE3 /* StationListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationListController.swift; sourceTree = "<group>"; };
 		EC8A955D1D61726F0095BAE3 /* StationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationCell.swift; sourceTree = "<group>"; };
+		EC90780C1DD989BD00EB5BF1 /* Get-Direction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Get-Direction.png"; path = "Images/Get-Direction.png"; sourceTree = "<group>"; };
 		EC9C712F1D658D6E000DA77B /* HomeNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNavigationController.swift; sourceTree = "<group>"; };
-		ECBAD91D1D6D7A0B00C99EC7 /* 404.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = 404.gif; path = Images/404.gif; sourceTree = "<group>"; };
+		ECB3F72E1DC88B9B009F8F9E /* Background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Background.jpg; path = Images/Background.jpg; sourceTree = "<group>"; };
 		ECBAD91E1D6D7A0B00C99EC7 /* Backgroud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Backgroud.png; path = Images/Backgroud.png; sourceTree = "<group>"; };
 		ECBAD91F1D6D7A0B00C99EC7 /* Bicycle-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Bicycle-30.png"; path = "Images/Bicycle-30.png"; sourceTree = "<group>"; };
-		ECBAD9201D6D7A0B00C99EC7 /* Bicycle-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Bicycle-100.png"; path = "Images/Bicycle-100.png"; sourceTree = "<group>"; };
 		ECBAD9211D6D7A0B00C99EC7 /* Bicycle-Demo-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Bicycle-Demo-1.jpg"; path = "Images/Bicycle-Demo-1.jpg"; sourceTree = "<group>"; };
 		ECBAD9221D6D7A0B00C99EC7 /* Bicycle-Demo-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Bicycle-Demo-2.jpg"; path = "Images/Bicycle-Demo-2.jpg"; sourceTree = "<group>"; };
 		ECBAD9231D6D7A0B00C99EC7 /* Checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Checked.png; path = Images/Checked.png; sourceTree = "<group>"; };
 		ECBAD9241D6D7A0B00C99EC7 /* emptyStar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = emptyStar.png; path = Images/emptyStar.png; sourceTree = "<group>"; };
 		ECBAD9251D6D7A0B00C99EC7 /* filledStar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = filledStar.png; path = Images/filledStar.png; sourceTree = "<group>"; };
 		ECBAD9261D6D7A0B00C99EC7 /* Geo-fence-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Geo-fence-30.png"; path = "Images/Geo-fence-30.png"; sourceTree = "<group>"; };
-		ECBAD9271D6D7A0B00C99EC7 /* Home-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Home-30.png"; path = "Images/Home-30.png"; sourceTree = "<group>"; };
-		ECBAD9281D6D7A0B00C99EC7 /* List-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "List-30.png"; path = "Images/List-30.png"; sourceTree = "<group>"; };
-		ECBAD9291D6D7A0B00C99EC7 /* Parking-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Parking-30.png"; path = "Images/Parking-30.png"; sourceTree = "<group>"; };
-		ECBAD92A1D6D7A0B00C99EC7 /* Settings-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Settings-30.png"; path = "Images/Settings-30.png"; sourceTree = "<group>"; };
 		ECBAD92B1D6D7A0B00C99EC7 /* Unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Unchecked.png; path = Images/Unchecked.png; sourceTree = "<group>"; };
-		ECBAD92C1D6D7A0B00C99EC7 /* User-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "User-30.png"; path = "Images/User-30.png"; sourceTree = "<group>"; };
 		ECC4E4E91D58168A000B80AE /* ChangePasswordController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordController.swift; sourceTree = "<group>"; };
 		ECC4E4EB1D581C3A000B80AE /* BookedDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookedDetailController.swift; sourceTree = "<group>"; };
 		ECC4E4EF1D5820C6000B80AE /* RegisterConfirmController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterConfirmController.swift; sourceTree = "<group>"; };
 		ECC4E4F71D582EE8000B80AE /* HistoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryController.swift; sourceTree = "<group>"; };
 		ECC4E4F91D5855AF000B80AE /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
 		ECF6C8791D5C0F7B000B4363 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		ECF836831DC2E53900C18325 /* State_Fail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = State_Fail.png; path = Images/State_Fail.png; sourceTree = "<group>"; };
+		ECF836841DC2E53900C18325 /* State_OK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = State_OK.png; path = Images/State_OK.png; sourceTree = "<group>"; };
 		ECFBD5AA1D5425AD001B0757 /* HopOn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HopOn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECFBD5AD1D5425AD001B0757 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECFBD5AF1D5425AD001B0757 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -179,6 +187,7 @@
 				ECFBD5E21D5434DA001B0757 /* Items.swift */,
 				EC55B5F11D66E13400371E81 /* CheckBox.swift */,
 				EC3AFCB81D66E87B00E016C3 /* RatingControl.swift */,
+				EC53FC531DBF21A3007997F8 /* SwiftLoading.swift */,
 			);
 			name = Widgets;
 			sourceTree = "<group>";
@@ -247,22 +256,25 @@
 		ECBAD91C1D6D7A0100C99EC7 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				ECBAD91D1D6D7A0B00C99EC7 /* 404.gif */,
+				EC90780C1DD989BD00EB5BF1 /* Get-Direction.png */,
+				EC36EE931DD4005F00B7F5A6 /* Bicycle.png */,
+				EC86FCBD1DD062BC0068CE92 /* Back.png */,
+				EC86FCBB1DD061810068CE92 /* Close.png */,
+				EC86FCB91DCC76F20068CE92 /* Location.png */,
+				EC86FCAD1DCADD830068CE92 /* Arrow.png */,
+				ECB3F72E1DC88B9B009F8F9E /* Background.jpg */,
+				ECF836831DC2E53900C18325 /* State_Fail.png */,
+				ECF836841DC2E53900C18325 /* State_OK.png */,
 				ECBAD91E1D6D7A0B00C99EC7 /* Backgroud.png */,
 				ECBAD91F1D6D7A0B00C99EC7 /* Bicycle-30.png */,
-				ECBAD9201D6D7A0B00C99EC7 /* Bicycle-100.png */,
 				ECBAD9211D6D7A0B00C99EC7 /* Bicycle-Demo-1.jpg */,
+				EC36EE971DD56FC000B7F5A6 /* 404.jpg */,
 				ECBAD9221D6D7A0B00C99EC7 /* Bicycle-Demo-2.jpg */,
 				ECBAD9231D6D7A0B00C99EC7 /* Checked.png */,
 				ECBAD9241D6D7A0B00C99EC7 /* emptyStar.png */,
 				ECBAD9251D6D7A0B00C99EC7 /* filledStar.png */,
 				ECBAD9261D6D7A0B00C99EC7 /* Geo-fence-30.png */,
-				ECBAD9271D6D7A0B00C99EC7 /* Home-30.png */,
-				ECBAD9281D6D7A0B00C99EC7 /* List-30.png */,
-				ECBAD9291D6D7A0B00C99EC7 /* Parking-30.png */,
-				ECBAD92A1D6D7A0B00C99EC7 /* Settings-30.png */,
 				ECBAD92B1D6D7A0B00C99EC7 /* Unchecked.png */,
-				ECBAD92C1D6D7A0B00C99EC7 /* User-30.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -448,25 +460,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC86FCBE1DD062BC0068CE92 /* Back.png in Resources */,
+				EC86FCBC1DD061810068CE92 /* Close.png in Resources */,
 				ECFBD5B81D5425AD001B0757 /* LaunchScreen.storyboard in Resources */,
-				ECBAD9301D6D7A0B00C99EC7 /* Bicycle-100.png in Resources */,
+				ECB3F72F1DC88B9B009F8F9E /* Background.jpg in Resources */,
+				ECF836861DC2E53900C18325 /* State_OK.png in Resources */,
+				EC90780D1DD989BD00EB5BF1 /* Get-Direction.png in Resources */,
 				ECFBD5B51D5425AD001B0757 /* Assets.xcassets in Resources */,
 				ECBAD9351D6D7A0B00C99EC7 /* filledStar.png in Resources */,
 				ECBAD9341D6D7A0B00C99EC7 /* emptyStar.png in Resources */,
 				ECBAD92F1D6D7A0B00C99EC7 /* Bicycle-30.png in Resources */,
+				EC86FCAE1DCADD830068CE92 /* Arrow.png in Resources */,
 				ECBAD9311D6D7A0B00C99EC7 /* Bicycle-Demo-1.jpg in Resources */,
 				ECBAD9331D6D7A0B00C99EC7 /* Checked.png in Resources */,
 				ECBAD92E1D6D7A0B00C99EC7 /* Backgroud.png in Resources */,
-				ECBAD9371D6D7A0B00C99EC7 /* Home-30.png in Resources */,
 				ECBAD9321D6D7A0B00C99EC7 /* Bicycle-Demo-2.jpg in Resources */,
 				ECBAD9361D6D7A0B00C99EC7 /* Geo-fence-30.png in Resources */,
 				ECFBD5B31D5425AD001B0757 /* Main.storyboard in Resources */,
-				ECBAD9391D6D7A0B00C99EC7 /* Parking-30.png in Resources */,
+				ECF836851DC2E53900C18325 /* State_Fail.png in Resources */,
+				EC36EE941DD4005F00B7F5A6 /* Bicycle.png in Resources */,
 				ECBAD93B1D6D7A0B00C99EC7 /* Unchecked.png in Resources */,
-				ECBAD93A1D6D7A0B00C99EC7 /* Settings-30.png in Resources */,
-				ECBAD9381D6D7A0B00C99EC7 /* List-30.png in Resources */,
-				ECBAD92D1D6D7A0B00C99EC7 /* 404.gif in Resources */,
-				ECBAD93C1D6D7A0B00C99EC7 /* User-30.png in Resources */,
+				EC36EE981DD56FC000B7F5A6 /* 404.jpg in Resources */,
+				EC86FCBA1DCC76F20068CE92 /* Location.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,6 +561,7 @@
 				EC3AFCB91D66E87B00E016C3 /* RatingControl.swift in Sources */,
 				EC02B1441D62BF070032A3C0 /* BicycleBookingController.swift in Sources */,
 				ECF6C87A1D5C0F7B000B4363 /* TabBarController.swift in Sources */,
+				EC53FC541DBF21A3007997F8 /* SwiftLoading.swift in Sources */,
 				EC02B1421D62B5DB0032A3C0 /* StationListNavigationController.swift in Sources */,
 				ECFBD5FA1D548D52001B0757 /* ResetPasswordController.swift in Sources */,
 				ECFBD5B01D5425AD001B0757 /* ViewController.swift in Sources */,

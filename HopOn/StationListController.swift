@@ -17,6 +17,7 @@ class StationListController: UIViewController, UITableViewDelegate, UITableViewD
     var stationArray = [Station]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        //self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(loadData), for: UIControlEvents.valueChanged)
         tableView.addSubview(refreshControl)
@@ -25,6 +26,11 @@ class StationListController: UIViewController, UITableViewDelegate, UITableViewD
         if (stationArray.count == 0){
             loadData()
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let firstIndexPath = NSIndexPath(row: 2, section: 0)
+        self.tableView.selectRow(at: firstIndexPath as IndexPath, animated: true, scrollPosition: .top)
     }
     
     func loadData(){
@@ -44,12 +50,18 @@ class StationListController: UIViewController, UITableViewDelegate, UITableViewD
                 let station = [Station](json: response.result.value)
                 self.stationArray = station
                 DispatchQueue.main.async(execute: {
+                    self.tableView.reloadData()
                     self.refreshControl.endRefreshing()
-                    self.tableView .reloadData()
                 })
             }
         }
     }
+    
+    func btnDetailTapped(station_id: Int){
+        let indexPath = NSIndexPath(row: 0, section: 0)
+        
+    }
+    
    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return stationArray.count
@@ -58,10 +70,10 @@ class StationListController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! StationCell
         cell.txtName.text = stationArray[(indexPath as NSIndexPath).row].name
-        cell.txtTotal.text = stationArray[(indexPath as NSIndexPath).row].bicycle_count + " bicycles"
         cell.txtAddress.text = stationArray[(indexPath as NSIndexPath).row].address
         cell.txtAvailable.text = stationArray[(indexPath as NSIndexPath).row].available_bicycle + " bicycles"
         cell.txtDistance.text = stationArray[(indexPath as NSIndexPath).row].distanceText
+        //cell.selectionStyle = .none
         return cell
     }
     

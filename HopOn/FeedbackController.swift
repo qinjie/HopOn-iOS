@@ -37,21 +37,26 @@ class FeedbackController: UIViewController {
             "Authorization": "Bearer " + Constants.token,
             "Accept": "application/json"
         ]
+        let rental_id:String = Transfer.object(forKey: "rental_id") as! String
         var feedbackList = [Int]()
         if (btnOption1.isChecked){ feedbackList.append(1) }
         if (btnOption2.isChecked){ feedbackList.append(2) }
         if (btnOption3.isChecked){ feedbackList.append(3) }
         if (btnOption4.isChecked){ feedbackList.append(4) }
         if (btnOption5.isChecked){ feedbackList.append(5) }
+        let feedbackJson: Array = feedbackList
         let rating: String = (String)(self.viewStarRate.rating)
         let parameters: Parameters = [
-            "rentalId" : self.txtBookingId.text,
-            "listIssue" : feedbackList,
-            "comment" : self.txtComment.text,
+            "rentalId" : rental_id,
+            "listIssue" : feedbackJson,
+            "comment" : self.txtComment.text!,
             "rating" : rating
         ]
-        
-        Alamofire.request(url!, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
+        Alamofire.request(url!, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseString { response in
+//            debugPrint(response)
+//            print(response.request)
+//            print(response.response)
+//            debugPrint(response.result)
             let statusCode = response.response?.statusCode
             if (statusCode == 200){
                 OperationQueue.main.addOperation {
@@ -60,6 +65,8 @@ class FeedbackController: UIViewController {
                             "Thanks for your feedback", preferredStyle: UIAlertControllerStyle.alert)
                         alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default)
                         {action -> Void in
+                            let secondTab = self.tabBarController?.viewControllers![2] as! BookingNavigationController
+                            secondTab.afterFeedback()
                             self.navigationController?.popViewController(animated: true)
                         })
                         

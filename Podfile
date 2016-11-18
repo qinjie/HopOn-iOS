@@ -4,5 +4,6 @@ use_frameworks!
 target 'HopOn' do
 	pod 'Bean-iOS-OSX-SDK'
     pod 'Alamofire', '~> 4.0'
+    pod 'AlamofireImage', '~> 3.1'
     pod 'EVReflection', :git => 'https://github.com/evermeer/EVReflection.git'
 end
